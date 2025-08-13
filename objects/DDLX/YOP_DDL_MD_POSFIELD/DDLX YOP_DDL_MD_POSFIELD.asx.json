@@ -7,9 +7,9 @@
     "DDLXNAME":"YOP_DDL_MD_POSFIELD",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2025-06-14",
-    "CHANGED_AT":"16:13:39",
-    "UUID":"FA163EBBCF7E1FE092A750F6B7D9C4E9",
+    "CHANGED_ON":"2025-08-13",
+    "CHANGED_AT":"06:08:54",
+    "UUID":"FA163EBBCF7E1FE09E817FB4C155C58A",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"YOP_DDL_MD_POSFIELD",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YOP_DDL_C_POSFIELD with\r\n{\r\n  @UI.facet: [ { id:            'Banka_Alan_Alv',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Banka Alan Alv Eşleşme',\r\n                 position:      10 }  ]\r\n  @UI : { lineItem: [{  position: 10 }] , identification: [{  position: 10 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCode', element: 'CompanyCode' }}] \r\n  Bukrs;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] }\r\n  BankNo;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'YOP_DDL_VH_BANKNO', element: 'BankNo' }}]\r\n  BankFieldNo;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] }\r\n  BankField;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] }\r\n  AlvField;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] }\r\n  DateFormat;\r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] }\r\n  TimeFormat;\r\n  @UI : { lineItem: [{  position: 80 }] , identification: [{  position: 80 }] }\r\n  AmountFormat;\r\n\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YOP_DDL_C_POSFIELD with\r\n{\r\n  @UI.facet: [ { id:            'Banka_Alan_Alv',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Banka Alan Alv Eşleşme',\r\n                 position:      10 }  ]\r\n  @UI : { lineItem: [{  position: 10 }] , identification: [{  position: 10 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCode', element: 'CompanyCode' }}] \r\n  Bukrs;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] }\r\n    @Consumption.valueHelpDefinition: [ { entity: { name: 'YOP_DDL_VH_BANKNO', element: 'BankNo' }}]\r\n  BankNo;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] }\r\n  BankFieldNo;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] }\r\n  BankField;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] }\r\n    @Consumption.valueHelpDefinition: [ { entity: { name: 'YOP_DDL_VH_ALVFIELD', element: 'alvfield' }}]\r\n  AlvField;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] }\r\n  DateFormat;\r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] }\r\n  TimeFormat;\r\n  @UI : { lineItem: [{  position: 80 }] , identification: [{  position: 80 }] }\r\n  AmountFormat;\r\n\r\n\r\n}"
    }
   ]
  },
@@ -45,6 +45,20 @@
    {
     "DDLXNAME":"YOP_DDL_MD_POSFIELD",
     "ELEMENT":"ALVFIELD",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.ELEMENT",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'alvfield'"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSFIELD",
+    "ELEMENT":"ALVFIELD",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'YOP_DDL_VH_ALVFIELD'"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSFIELD",
+    "ELEMENT":"ALVFIELD",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"50"
@@ -87,20 +101,6 @@
    {
     "DDLXNAME":"YOP_DDL_MD_POSFIELD",
     "ELEMENT":"BANKFIELDNO",
-    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.ELEMENT",
-    "ELEMENT_TYPE":"S",
-    "VALUE":"'BankNo'"
-   },
-   {
-    "DDLXNAME":"YOP_DDL_MD_POSFIELD",
-    "ELEMENT":"BANKFIELDNO",
-    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
-    "ELEMENT_TYPE":"S",
-    "VALUE":"'YOP_DDL_VH_BANKNO'"
-   },
-   {
-    "DDLXNAME":"YOP_DDL_MD_POSFIELD",
-    "ELEMENT":"BANKFIELDNO",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"30"
@@ -111,6 +111,20 @@
     "NAME":"UI.LINEITEM$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"30"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSFIELD",
+    "ELEMENT":"BANKNO",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.ELEMENT",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'BankNo'"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSFIELD",
+    "ELEMENT":"BANKNO",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'YOP_DDL_VH_BANKNO'"
    },
    {
     "DDLXNAME":"YOP_DDL_MD_POSFIELD",
@@ -241,8 +255,8 @@
     "EXTENDED_ARTIFACT":"YOP_DDL_C_POSFIELD",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"FA163EBBCF7E1FE092A750F6B7D9C4E9",
-    "RT_HASH":"77C735F757BE23114FDA0DB1A74596107920D010",
+    "DT_UUID":"FA163EBBCF7E1FE09E817FB4C155C58A",
+    "RT_HASH":"478ABF83191F54E3AE3D625772CA9DD9A5BFB973",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }
@@ -254,7 +268,17 @@
   [
    {
     "DDLXNAME":"YOP_DDL_MD_POSFIELD",
-    "ELEMENT":"BANKFIELDNO",
+    "ELEMENT":"ALVFIELD",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
+    "PATH":"YOP_DDL_VH_ALVFIELD",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DO",
+    "REF_OBJECT_NAME":"YOP_DDL_VH_ALVFIELD",
+    "REF_OBJECT_ELEMENT":""
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSFIELD",
+    "ELEMENT":"BANKNO",
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
     "PATH":"YOP_DDL_VH_BANKNO",
     "REF_OBJECT_TYPE":"STOB",
