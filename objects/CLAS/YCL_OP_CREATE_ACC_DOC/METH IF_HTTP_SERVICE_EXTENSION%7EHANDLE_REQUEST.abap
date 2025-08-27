@@ -51,14 +51,14 @@
                           documentitemtext              = | { <ls_header>-workplaceno } && Pos Tahsilatı|
                           _currencyamount = VALUE #( ( currencyrole = '00'
                                                        journalentryitemamount = ( <ls_header>-grossamount * -1 )
-                                                       currency = <ls_header>-waers  ) )          ) TO lt_glitem.
+                                                       currency = <ls_header>-currencycode  ) )          ) TO lt_glitem.
 
           APPEND VALUE #( glaccountlineitem             = |002|
                           glaccount                     = ls_bankacc-poshs
                            documentitemtext              = | { <ls_header>-workplaceno } && Pos Tahsilatı|
                            _currencyamount = VALUE #( ( currencyrole = '00'
                                                         journalentryitemamount = <ls_header>-netamount
-                                                         currency = <ls_header>-waers  ) )          ) TO lt_glitem.
+                                                         currency = <ls_header>-currencycode  ) )          ) TO lt_glitem.
 
           APPEND VALUE #( glaccountlineitem             = |003|
                           glaccount                     = ls_bankacc-finhs
@@ -66,7 +66,7 @@
                           documentitemtext              = | { <ls_header>-workplaceno } && Pos Tahsilatı|
                           _currencyamount = VALUE #( ( currencyrole = '00'
                                                        journalentryitemamount = <ls_header>-commissionamount
-                                                       currency = <ls_header>-waers  ) )          ) TO lt_glitem.
+                                                       currency = <ls_header>-currencycode  ) )          ) TO lt_glitem.
 
 
           <fs_je>-%param = VALUE #( companycode                  = <ls_header>-bukrs
