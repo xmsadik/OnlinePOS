@@ -1,7 +1,8 @@
   METHOD mapping_seperated_others.
     DATA : lt_posdata_detail TYPE TABLE OF yop_t_posdetail,
            lv_exit           TYPE string.
-
+    DELETE FROM yop_t_posdetail.
+COMMIT WORK.
     DATA(lt_lines) = it_lines.
     LOOP AT lt_lines INTO DATA(ls_string_tab).
       SPLIT ls_string_tab AT ';' INTO TABLE DATA(lt_split_tab).
