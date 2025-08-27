@@ -129,8 +129,6 @@
       <ls_posdata_detail>-create_time = cl_abap_context_info=>get_system_time( ).
       <ls_posdata_detail>-create_user = sy-uname.
       <ls_posdata_detail>-waers = 'TRY'.
-      clear <ls_posdata_detail>-commission_amount.
-       <ls_posdata_detail>-commission_amount = 1.
 *      <ls_posdata_detail>-file_name   = 'Test_19052025.txt'.
     ENDLOOP.
     IF lt_posdata_detail IS NOT INITIAL.
