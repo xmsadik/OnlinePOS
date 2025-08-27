@@ -7,9 +7,9 @@
     "DDLXNAME":"YOP_DDL_MD_POSDETAIL",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2025-06-23",
-    "CHANGED_AT":"14:01:30",
-    "UUID":"FA163EBBCF7E1FE0948751FF5B556505",
+    "CHANGED_ON":"2025-08-27",
+    "CHANGED_AT":"14:31:31",
+    "UUID":"FA163EBBCF7E1FE0A0EA50B3CB9E25B4",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"YOP_DDL_MD_POSDETAIL",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YOP_DDL_C_POSDETAIL with\r\n{\r\n  @UI.facet: [ { id:            'POS_DETAIL',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Online Pos Detay Bilgileri',\r\n                 position:      10 }  ]\r\n  @UI : { lineItem: [{  position: 10 }] ,\r\n          identification: [{  position: 10 }] ,\r\n          selectionField:[{  position: 10 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCode', element: 'CompanyCode' }}]\r\n  Bukrs;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] , selectionField:[{  position: 20 }]}\r\n  BankNo;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] , selectionField:[{  position: 30 }] }\r\n  BankName;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] , selectionField:[{  position: 40 }]}\r\n  WorkplaceNo;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] , selectionField:[{  position: 50 }]}\r\n  TerminalNo;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] , selectionField:[{  position: 60 }]}\r\n  TransactionDate;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] , selectionField:[{  position: 70 }]}\r\n  ValueDate;\r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] , selectionField:[{  position: 80 }]}\r\n  ProcessType;\r\n  @UI : { lineItem: [{  position: 80 }] , identification: [{  position: 80 }] , selectionField:[{  position: 90 }]}\r\n  CardNo;\r\n  @UI : { lineItem: [{  position: 90 }] , identification: [{  position: 90 }] , selectionField:[{  position: 100 }]}\r\n  CardType;\r\n  @UI : { lineItem: [{  position: 100 }] , identification: [{  position: 100 }] , selectionField:[{  position: 110 }]}\r\n  ProvisionAprCode;\r\n  @UI : { lineItem: [{  position: 110 }] , identification: [{  position: 110 }] , selectionField:[{  position: 120 }]}\r\n  InstallmentOrder;\r\n  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 130 }] }\r\n  InstallmentNumber;\r\n  @UI : { lineItem: [{  position: 130}] , identification: [{  position: 140 }] }\r\n  CurrencyCode;\r\n  @UI : { lineItem: [{  position: 140 }] , identification: [{  position: 150 }] }\r\n  GrossAmount;\r\n  @UI : { lineItem: [{  position: 150 }] , identification: [{  position: 160 }] }\r\n  NetAmount;\r\n  @UI : { lineItem: [{  position: 160 }] , identification: [{  position: 170 }] }\r\n  CommissionAmount;\r\n  @UI : { lineItem: [{  position: 170 }] , identification: [{  position: 180 }] }\r\n  InterruptAmount;\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YOP_DDL_C_POSDETAIL with\r\n{\r\n  @UI.facet: [ { id:            'POS_DETAIL',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Online Pos Detay Bilgileri',\r\n                 position:      10 }  ]\r\n  @UI : { lineItem: [{  position: 10 }] ,\r\n          identification: [{  position: 10 }] ,\r\n          selectionField:[{  position: 10 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCode', element: 'CompanyCode' }}]\r\n  Bukrs;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] , selectionField:[{  position: 20 }]}\r\n  BankNo;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] , selectionField:[{  position: 30 }] }\r\n  BankName;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] , selectionField:[{  position: 40 }]}\r\n  WorkplaceNo;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] , selectionField:[{  position: 50 }]}\r\n  TerminalNo;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] , selectionField:[{  position: 60 }]}\r\n  TransactionDate;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] , selectionField:[{  position: 70 }]}\r\n  ValueDate;\r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] , selectionField:[{  position: 80 }]}\r\n  ProcessType;\r\n  @UI : { lineItem: [{  position: 80 }] , identification: [{  position: 80 }] , selectionField:[{  position: 90 }]}\r\n  CardNo;\r\n  @UI : { lineItem: [{  position: 90 }] , identification: [{  position: 90 }] , selectionField:[{  position: 100 }]}\r\n  CardType;\r\n  @UI : { lineItem: [{  position: 100 }] , identification: [{  position: 100 }] , selectionField:[{  position: 110 }]}\r\n  ProvisionAprCode;\r\n  @UI : { lineItem: [{  position: 110 }] , identification: [{  position: 110 }] , selectionField:[{  position: 120 }]}\r\n  InstallmentOrder;\r\n  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 130 }] }\r\n  InstallmentNumber;\r\n  @UI : { lineItem: [{  position: 130}] , identification: [{  position: 140 }] }\r\n  CurrencyCode;\r\n  @UI : { lineItem: [{  position: 140 }] , identification: [{  position: 150 }] }\r\n  GrossAmount;\r\n  @UI : { lineItem: [{  position: 150 }] , identification: [{  position: 160 }] }\r\n  NetAmount;\r\n  @UI : { lineItem: [{  position: 160 }] , identification: [{  position: 170 }] }\r\n  CommissionAmount;\r\n  @UI : { lineItem: [{  position: 170 }] , identification: [{  position: 180 }] }\r\n  @UI.hidden: true\r\n  InterruptAmount;\r\n\r\n}"
    }
   ]
  },
@@ -276,6 +276,13 @@
    {
     "DDLXNAME":"YOP_DDL_MD_POSDETAIL",
     "ELEMENT":"INTERRUPTAMOUNT",
+    "NAME":"UI.HIDDEN",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"true"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSDETAIL",
+    "ELEMENT":"INTERRUPTAMOUNT",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"180"
@@ -451,8 +458,8 @@
     "EXTENDED_ARTIFACT":"YOP_DDL_C_POSDETAIL",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"FA163EBBCF7E1FE0948751FF5B556505",
-    "RT_HASH":"8B816824B4B43EB5C171F65F907DD42DEED350A1",
+    "DT_UUID":"FA163EBBCF7E1FE0A0EA50B3CB9E25B4",
+    "RT_HASH":"94B6654E2A9085095D1BBCC5B40E7F56E0D73313",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }

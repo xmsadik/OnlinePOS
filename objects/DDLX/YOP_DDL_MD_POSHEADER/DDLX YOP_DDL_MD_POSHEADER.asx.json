@@ -8,8 +8,8 @@
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
     "CHANGED_ON":"2025-08-27",
-    "CHANGED_AT":"11:17:31",
-    "UUID":"FA163EBBCF7E1FE0A0E6ED73BCCB65B2",
+    "CHANGED_AT":"15:14:23",
+    "UUID":"FA163EBBCF7E1FE0A0EB106127F725B4",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YOP_DDL_C_POSHEADER with\r\n{\r\n  @UI.facet: [ { id:            'Bank_Format',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Banka Format Bilgileri',\r\n                 position:      10 }  ]\r\n  @UI : { lineItem: [{  position: 10 },\r\n                     { type  : #FOR_ACTION ,\r\n                       label : 'Test',\r\n                       dataAction : 'test' }] , \r\n          identification: [{  position: 10 }] , \r\n          selectionField:[{  position: 10 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCode', element: 'CompanyCode' }}]\r\n  Bukrs;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] , selectionField:[{  position: 20 }]}\r\n  BankNo;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] }\r\n  BankName;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] , selectionField:[{  position: 30 }]}\r\n  WorkplaceNo;\r\n  //  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] }\r\n  //  TerminalNo;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] , selectionField:[{  position: 40 }]}\r\n  TransactionDate;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] , selectionField:[{  position: 50 }]}\r\n  ValueDate;\r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] , selectionField:[{  position: 60 }]}\r\n  ProcessType;\r\n  //  @UI : { lineItem: [{  position: 90 }] , identification: [{  position: 90 }] }\r\n  //  FileName;\r\n  //  @UI : { lineItem: [{  position: 100 }] , identification: [{  position: 100 }] }\r\n  //  CreateDate;\r\n  //  @UI : { lineItem: [{  position: 110 }] , identification: [{  position: 110 }] }\r\n  //  CreateTime;\r\n  //  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 120 }] }\r\n  //  CreateUser;\r\n  //  @UI : { lineItem: [{  position: 130 }] , identification: [{  position: 130 }] }\r\n  //  AccBelnr;\r\n  //  @UI : { lineItem: [{  position: 140 }] , identification: [{  position: 140 }] }\r\n  //  AccCreateDate;\r\n  //  @UI : { lineItem: [{  position: 150 }] , identification: [{  position: 150 }] }\r\n  //  AccCreateTime;\r\n  //  @UI : { lineItem: [{  position: 160 }] , identification: [{  position: 160 }] }\r\n  //  AccCreateUser;\r\n  @UI : { lineItem: [{  position: 80}] , identification: [{  position: 80 }] }\r\n  CurrencyCode;\r\n  @UI : { lineItem: [{  position: 90 }] , identification: [{  position: 90 }] }\r\n  GrossAmount;\r\n  @UI : { lineItem: [{  position: 100 }] , identification: [{  position: 100 }] }\r\n  NetAmount;\r\n  @UI : { lineItem: [{  position: 110 }] , identification: [{  position: 110 }] }\r\n  CommissionAmount;\r\n  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 120 }] }\r\n  InterruptAmount;\r\n    @UI : { lineItem: [{  position: 130 }] , identification: [{  position: 130 }] }\r\n  CommissionRate;\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\nannotate entity YOP_DDL_C_POSHEADER with\r\n{\r\n  @UI.facet: [ { id:            'Bank_Format',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Banka Format Bilgileri',\r\n                 position:      10 }  ]\r\n  @UI : { lineItem: [{  position: 10 },\r\n                     { type  : #FOR_ACTION ,\r\n                       label : 'Test',\r\n                       dataAction : 'test' }] , \r\n          identification: [{  position: 10 }] , \r\n          selectionField:[{  position: 10 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCode', element: 'CompanyCode' }}]\r\n  Bukrs;\r\n  @UI : { lineItem: [{  position: 20 }] , identification: [{  position: 20 }] , selectionField:[{  position: 20 }]}\r\n  BankNo;\r\n  @UI : { lineItem: [{  position: 30 }] , identification: [{  position: 30 }] }\r\n  BankName;\r\n  @UI : { lineItem: [{  position: 40 }] , identification: [{  position: 40 }] , selectionField:[{  position: 30 }]}\r\n  WorkplaceNo;\r\n  //  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] }\r\n  //  TerminalNo;\r\n  @UI : { lineItem: [{  position: 50 }] , identification: [{  position: 50 }] , selectionField:[{  position: 40 }]}\r\n  TransactionDate;\r\n  @UI : { lineItem: [{  position: 60 }] , identification: [{  position: 60 }] , selectionField:[{  position: 50 }]}\r\n  ValueDate;\r\n  @UI : { lineItem: [{  position: 70 }] , identification: [{  position: 70 }] , selectionField:[{  position: 60 }]}\r\n  ProcessType;\r\n  //  @UI : { lineItem: [{  position: 90 }] , identification: [{  position: 90 }] }\r\n  //  FileName;\r\n  //  @UI : { lineItem: [{  position: 100 }] , identification: [{  position: 100 }] }\r\n  //  CreateDate;\r\n  //  @UI : { lineItem: [{  position: 110 }] , identification: [{  position: 110 }] }\r\n  //  CreateTime;\r\n  //  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 120 }] }\r\n  //  CreateUser;\r\n  //  @UI : { lineItem: [{  position: 130 }] , identification: [{  position: 130 }] }\r\n  //  AccBelnr;\r\n  //  @UI : { lineItem: [{  position: 140 }] , identification: [{  position: 140 }] }\r\n  //  AccCreateDate;\r\n  //  @UI : { lineItem: [{  position: 150 }] , identification: [{  position: 150 }] }\r\n  //  AccCreateTime;\r\n  //  @UI : { lineItem: [{  position: 160 }] , identification: [{  position: 160 }] }\r\n  //  AccCreateUser;\r\n  @UI : { lineItem: [{  position: 80}] , identification: [{  position: 80 }] }\r\n  CurrencyCode;\r\n  @UI : { lineItem: [{  position: 90 , label : 'Brüt Tutar' }] , identification: [{  position: 90, label : 'Brüt Tutar' }] }\r\n  GrossAmount;\r\n  @UI : { lineItem: [{  position: 100, label : 'Net Tutar' }] , identification: [{  position: 100, label : 'Net Tutar' }] }\r\n  NetAmount;\r\n  @UI : { lineItem: [{  position: 110  , label : 'Komisyon Tutarı'}] , identification: [{  position: 110 , label : 'Komisyon Tutarı'}] }\r\n  CommissionAmount;\r\n  @UI.hidden: true\r\n  @UI : { lineItem: [{  position: 120 }] , identification: [{  position: 120 }] }\r\n  InterruptAmount;\r\n    @UI : { lineItem: [{  position: 130, label : 'Komisyon Oranı' }] , identification: [{  position: 130 , label : 'Komisyon Oranı'}] }\r\n  CommissionRate;\r\n\r\n}"
    }
   ]
  },
@@ -171,9 +171,23 @@
    {
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
     "ELEMENT":"COMMISSIONAMOUNT",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Komisyon Tutarı'"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "ELEMENT":"COMMISSIONAMOUNT",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"110"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "ELEMENT":"COMMISSIONAMOUNT",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Komisyon Tutarı'"
    },
    {
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
@@ -185,9 +199,23 @@
    {
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
     "ELEMENT":"COMMISSIONRATE",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Komisyon Oranı'"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "ELEMENT":"COMMISSIONRATE",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"130"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "ELEMENT":"COMMISSIONRATE",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Komisyon Oranı'"
    },
    {
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
@@ -213,6 +241,13 @@
    {
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
     "ELEMENT":"GROSSAMOUNT",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Brüt Tutar'"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "ELEMENT":"GROSSAMOUNT",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"90"
@@ -220,9 +255,23 @@
    {
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
     "ELEMENT":"GROSSAMOUNT",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Brüt Tutar'"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "ELEMENT":"GROSSAMOUNT",
     "NAME":"UI.LINEITEM$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"90"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "ELEMENT":"INTERRUPTAMOUNT",
+    "NAME":"UI.HIDDEN",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"true"
    },
    {
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
@@ -241,9 +290,23 @@
    {
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
     "ELEMENT":"NETAMOUNT",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Net Tutar'"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "ELEMENT":"NETAMOUNT",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"100"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "ELEMENT":"NETAMOUNT",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Net Tutar'"
    },
    {
     "DDLXNAME":"YOP_DDL_MD_POSHEADER",
@@ -355,6 +418,62 @@
     "ELEMENT":"BUKRS",
     "NAME":"UI.LINEITEM$2$.LABEL",
     "TEXT":"Test"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"COMMISSIONAMOUNT",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "TEXT":"Komisyon Tutarı"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"COMMISSIONAMOUNT",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "TEXT":"Komisyon Tutarı"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"COMMISSIONRATE",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "TEXT":"Komisyon Oranı"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"COMMISSIONRATE",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "TEXT":"Komisyon Oranı"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"GROSSAMOUNT",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "TEXT":"Brüt Tutar"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"GROSSAMOUNT",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "TEXT":"Brüt Tutar"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"NETAMOUNT",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "TEXT":"Net Tutar"
+   },
+   {
+    "DDLXNAME":"YOP_DDL_MD_POSHEADER",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"NETAMOUNT",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "TEXT":"Net Tutar"
    }
   ]
  },
@@ -367,8 +486,8 @@
     "EXTENDED_ARTIFACT":"YOP_DDL_C_POSHEADER",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"FA163EBBCF7E1FE0A0E6ED73BCCB65B2",
-    "RT_HASH":"870939548EC548DFF1D1FCD84DE53BF350D76A18",
+    "DT_UUID":"FA163EBBCF7E1FE0A0EB106127F725B4",
+    "RT_HASH":"B1F41D162FF2271A510C59416C6B44E40AFF367D",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }

@@ -73,7 +73,7 @@
                                     createdbyuser                = sy-uname
                                     businesstransactiontype      = 'RFBU'
                                     accountingdocumenttype       = 'PT'
-                                    documentdate                 = <ls_header>-valuedate
+                                    documentdate                 = <ls_header>-transactiondate
                                     postingdate                  = <ls_header>-valuedate
                                     accountingdocumentheadertext = 'Pos Tahsilatı'
                                     _glitems                     = VALUE #( FOR wa_glitem  IN lt_glitem  ( CORRESPONDING #( wa_glitem  MAPPING _currencyamount = _currencyamount ) ) )
@@ -99,6 +99,9 @@
                       WITH VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL )
                       INTO DATA(lv_message).
 
+              APPEND INITIAL LINE TO ms_response-messages ASSIGNING FIELD-SYMBOL(<fs_messages>).
+              <fs_messages>-message = lv_message.
+              <fs_messages>-message_v1 = lv_message.
             ELSE.
 *              ms_response-messages = VALUE #( base ms_response-messages FOR wa_commit IN ls_commit_reported-journalentry ( message = wa_commit-%msg->if_message~get_text( ) messagetype = mc_error ) ).
             ENDIF.
