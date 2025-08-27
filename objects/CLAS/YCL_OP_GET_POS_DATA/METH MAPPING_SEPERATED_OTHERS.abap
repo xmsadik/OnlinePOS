@@ -1,8 +1,7 @@
   METHOD mapping_seperated_others.
     DATA : lt_posdata_detail TYPE TABLE OF yop_t_posdetail,
            lv_exit           TYPE string.
-    DELETE FROM yop_t_posdetail.
-COMMIT WORK.
+
     DATA(lt_lines) = it_lines.
     LOOP AT lt_lines INTO DATA(ls_string_tab).
       SPLIT ls_string_tab AT ';' INTO TABLE DATA(lt_split_tab).
@@ -130,6 +129,8 @@ COMMIT WORK.
       <ls_posdata_detail>-create_time = cl_abap_context_info=>get_system_time( ).
       <ls_posdata_detail>-create_user = sy-uname.
       <ls_posdata_detail>-waers = 'TRY'.
+      clear <ls_posdata_detail>-commission_amount.
+       <ls_posdata_detail>-commission_amount = 1.
 *      <ls_posdata_detail>-file_name   = 'Test_19052025.txt'.
     ENDLOOP.
     IF lt_posdata_detail IS NOT INITIAL.
