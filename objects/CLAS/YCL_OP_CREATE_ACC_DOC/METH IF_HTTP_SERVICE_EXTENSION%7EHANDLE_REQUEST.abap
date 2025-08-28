@@ -76,6 +76,7 @@
                                     documentdate                 = <ls_header>-transactiondate
                                     postingdate                  = <ls_header>-valuedate
                                     accountingdocumentheadertext = 'Pos Tahsilatı'
+                                    DocumentReferenceID          = <ls_header>-workplaceno
                                     _glitems                     = VALUE #( FOR wa_glitem  IN lt_glitem  ( CORRESPONDING #( wa_glitem  MAPPING _currencyamount = _currencyamount ) ) )
                                   ).
           MODIFY ENTITIES OF i_journalentrytp
