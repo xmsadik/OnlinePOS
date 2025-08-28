@@ -135,10 +135,14 @@
       WHERE workplace_no = @<ls_posdata_detail>-workplace_no
             INTO @DATA(lv_fincs).
 
-      SELECT SINGLE costcenterdescription
-      FROM  i_costcentertext
-      WHERE costcenter = @lv_fincs
-            INTO @DATA(lv_desc).
+
+data(lv_sys_date) = cl_abap_context_info=>get_system_date( ).
+SELECT SINGLE costcenterdescription
+  FROM i_costcentertext
+  WHERE costcenter   = @lv_fincs
+    AND language     = @sy-langu
+    AND validityenddate >= @lv_sys_date
+  INTO @DATA(lv_desc).
       IF sy-subrc EQ 0.
         <ls_posdata_detail>-workplace_desc = lv_desc.
       ENDIF.
