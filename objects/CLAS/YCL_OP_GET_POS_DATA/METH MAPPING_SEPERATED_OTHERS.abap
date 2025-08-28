@@ -4,7 +4,7 @@
 
 
     SELECT *
-      FROM i_costcentertexttp_2
+      FROM i_costcentertexttp_2 WITH PRIVILEGED ACCESS
       INTO TABLE @DATA(lt_costcenter).
 
     DATA(lt_lines) = it_lines.
