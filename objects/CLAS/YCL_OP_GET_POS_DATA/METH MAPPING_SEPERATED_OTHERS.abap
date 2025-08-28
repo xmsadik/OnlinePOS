@@ -129,6 +129,16 @@
       <ls_posdata_detail>-create_time = cl_abap_context_info=>get_system_time( ).
       <ls_posdata_detail>-create_user = sy-uname.
       <ls_posdata_detail>-waers = 'TRY'.
+
+
+      SELECT SINGLE costcenterdescription
+      FROM  i_costcentertext
+      WHERE costcenter = @<ls_posdata_detail>-workplace_no
+            INTO @DATA(lv_desc).
+      IF sy-subrc EQ 0.
+        <ls_posdata_detail>-workplace_desc = lv_desc.
+      ENDIF.
+
 *      <ls_posdata_detail>-file_name   = 'Test_19052025.txt'.
     ENDLOOP.
     IF lt_posdata_detail IS NOT INITIAL.
