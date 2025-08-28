@@ -130,10 +130,14 @@
       <ls_posdata_detail>-create_user = sy-uname.
       <ls_posdata_detail>-waers = 'TRY'.
 
+      SELECT SINGLE fincs
+      FROM  yop_t_bankacc
+      WHERE workplace_no = @<ls_posdata_detail>-workplace_no
+            INTO @DATA(lv_fincs).
 
       SELECT SINGLE costcenterdescription
       FROM  i_costcentertext
-      WHERE costcenter = @<ls_posdata_detail>-workplace_no
+      WHERE costcenter = @lv_fincs
             INTO @DATA(lv_desc).
       IF sy-subrc EQ 0.
         <ls_posdata_detail>-workplace_desc = lv_desc.
