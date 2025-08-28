@@ -140,7 +140,7 @@ data(lv_sys_date) = cl_abap_context_info=>get_system_date( ).
 SELECT SINGLE costcenterdescription
   FROM i_costcentertext
   WHERE costcenter   = @lv_fincs
-    AND language     = @sy-langu
+    AND language     = 'T'
     AND validityenddate >= @lv_sys_date
   INTO @DATA(lv_desc).
       IF sy-subrc EQ 0.
