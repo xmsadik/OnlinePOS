@@ -100,13 +100,21 @@
                       WITH VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL )
                       INTO DATA(lv_message).
 
+              DATA(lv_accdoc) =  VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL ).
+              IF lv_accdoc IS NOT INITIAL.
+                UPDATE yop_t_posdetail
+                SET acc_document = @<ls_header>-uuid
+                WHERE uuid         = @lv_accdoc.
+                commit WORK.
+              ENDIF.
+
               APPEND INITIAL LINE TO ms_response-messages ASSIGNING FIELD-SYMBOL(<fs_messages>).
               <fs_messages>-message = lv_message.
               <fs_messages>-message_v1 = lv_message.
 
-                  DATA(lv_response_body) = /ui2/cl_json=>serialize( EXPORTING data = ms_response ).
-                    response->set_text( lv_response_body ).
-                    response->set_header_field( i_name = mc_header_content i_value = mc_content_type ).
+              DATA(lv_response_body) = /ui2/cl_json=>serialize( EXPORTING data = ms_response ).
+              response->set_text( lv_response_body ).
+              response->set_header_field( i_name = mc_header_content i_value = mc_content_type ).
             ELSE.
 *              ms_response-messages = VALUE #( base ms_response-messages FOR wa_commit IN ls_commit_reported-journalentry ( message = wa_commit-%msg->if_message~get_text( ) messagetype = mc_error ) ).
             ENDIF.
