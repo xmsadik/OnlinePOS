@@ -103,8 +103,8 @@
               DATA(lv_accdoc) =  VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL ).
               IF lv_accdoc IS NOT INITIAL.
                 UPDATE yop_t_posdetail
-                SET acc_document = @<ls_header>-uuid
-                WHERE uuid         = @lv_accdoc.
+                SET acc_document = @lv_accdoc
+                WHERE uuid         = @<ls_header>-uuid.
                 commit WORK.
               ENDIF.
 
