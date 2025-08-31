@@ -105,7 +105,16 @@
                 UPDATE yop_t_posdetail
                 SET acc_document = @lv_accdoc
                 WHERE uuid         = @<ls_header>-uuid.
-                commit WORK.
+
+
+                MODIFY ENTITIES OF yop_ddl_i_posdata IN LOCAL MODE
+  ENTITY yop_ddl_i_posdata
+    UPDATE FIELDS ( AccDocument )
+    WITH VALUE #(
+      ( uuid        = <ls_header>-uuid
+        AccDocument = lv_accdoc
+        %control-AccDocument = if_abap_behv=>mk-on )
+    ).
               ENDIF.
 
               APPEND INITIAL LINE TO ms_response-messages ASSIGNING FIELD-SYMBOL(<fs_messages>).
