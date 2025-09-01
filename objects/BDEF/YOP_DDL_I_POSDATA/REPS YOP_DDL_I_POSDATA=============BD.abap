@@ -1,5 +1,5 @@
 managed implementation in class zbp_op_ddl_i_posdata unique;
-strict ( 2 );
+strict ( 1 );
 
 define behavior for YOP_DDL_I_POSDATA //alias <alias_name>
 persistent table yop_t_posdetail
