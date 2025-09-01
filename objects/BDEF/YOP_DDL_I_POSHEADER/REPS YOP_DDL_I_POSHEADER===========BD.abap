@@ -11,7 +11,7 @@ authorization master ( instance )
   update;
   delete;
   action test;
-  field ( readonly:update ) Bukrs, BankNo, BankName, WorkplaceNo,TransactionDate, ValueDate, ProcessType, CurrencyCode,Uuid;
+  field ( readonly:update ) Bukrs, BankNo, BankName, WorkplaceNo,TransactionDate, ValueDate, ProcessType, CurrencyCode;
   mapping for yop_t_posdetail
     {
       GrossAmount      = gross_amount;
