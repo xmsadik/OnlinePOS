@@ -1,5 +1,5 @@
 projection implementation in class zbp_op_ddl_c_posheader unique;
-strict ( 2 );
+strict ( 1 );
 
 define behavior for YOP_DDL_C_POSHEADER //alias <alias_name>
 {
