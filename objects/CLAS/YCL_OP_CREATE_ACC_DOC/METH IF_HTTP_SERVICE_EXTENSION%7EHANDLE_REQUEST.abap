@@ -115,12 +115,26 @@
 
                 UPDATE yop_t_posdetail
                 SET acc_belnr = @lv_accdoc
-                WHERE Bukrs = @<ls_header>-Bukrs and
-                     Bank_No = @<ls_header>-BankNo and
-                     Workplace_No = @<ls_header>-WorkplaceNo and
-                     Transaction_Date = @<ls_header>-TransactionDate and
-                     Value_Date = @<ls_header>-ValueDate and
+                WHERE Bukrs = @<ls_header>-Bukrs AND
+                     Bank_No = @<ls_header>-BankNo AND
+                     Workplace_No = @<ls_header>-WorkplaceNo AND
+                     Transaction_Date = @<ls_header>-TransactionDate AND
+                     Value_Date = @<ls_header>-ValueDate AND
                      Process_Type = @<ls_header>-ProcessType .
+                IF sy-subrc EQ 0.
+                ENDIF.
+
+                SELECT *
+                FROM yop_t_posdetail
+                WHERE Bukrs = @<ls_header>-Bukrs AND
+                Bank_No = @<ls_header>-BankNo AND
+                Workplace_No = @<ls_header>-WorkplaceNo AND
+                Transaction_Date = @<ls_header>-TransactionDate AND
+                Value_Date = @<ls_header>-ValueDate AND
+                Process_Type = @<ls_header>-ProcessType
+                INTO TABLE @DATA(lt_deneme) .
+                IF sy-subrc EQ 0.
+                ENDIF.
 
               ENDIF.
 
