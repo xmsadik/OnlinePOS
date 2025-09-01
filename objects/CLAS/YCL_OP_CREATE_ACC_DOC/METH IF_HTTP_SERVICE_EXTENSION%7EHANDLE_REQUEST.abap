@@ -115,7 +115,12 @@
 
                 UPDATE yop_t_posdetail
                 SET acc_belnr = @lv_accdoc
-                WHERE uuid = @<ls_header>-uuid.
+                WHERE Bukrs = @<ls_header>-Bukrs and
+                     Bank_No = @<ls_header>-BankNo and
+                     Workplace_No = @<ls_header>-WorkplaceNo and
+                     Transaction_Date = @<ls_header>-TransactionDate and
+                     Value_Date = @<ls_header>-ValueDate and
+                     Process_Type = @<ls_header>-ProcessType .
 
               ENDIF.
 
