@@ -29,6 +29,4 @@
              AND bank_no EQ @is_request-bankno
            INTO TABLE @mt_bank_field_calc.
 
-    DELETE FROM yop_t_posdetail.
-
   ENDMETHOD.
