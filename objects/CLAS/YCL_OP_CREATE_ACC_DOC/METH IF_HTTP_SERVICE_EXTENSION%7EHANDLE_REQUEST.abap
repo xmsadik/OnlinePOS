@@ -102,9 +102,6 @@
 
               DATA(lv_accdoc) =  VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL ).
               IF lv_accdoc IS NOT INITIAL.
-                UPDATE yop_t_posdetail
-                SET acc_document = @lv_accdoc
-                WHERE uuid         = @<ls_header>-uuid.
 
 
                 MODIFY ENTITIES OF yop_ddl_i_posdata IN LOCAL MODE
