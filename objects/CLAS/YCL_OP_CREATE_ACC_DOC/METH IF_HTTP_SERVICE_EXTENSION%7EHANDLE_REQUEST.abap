@@ -109,19 +109,10 @@
 
               IF lv_accdoc IS NOT INITIAL.
 
-
-*                MODIFY ENTITIES OF yop_ddl_i_posdata IN LOCAL MODE
-*              ENTITY yop_ddl_i_posdata
-*                UPDATE FIELDS ( AccDocument )
-*                WITH VALUE #(
-*                  ( uuid        = <ls_header>-uuid
-*                    AccDocument = lv_accdoc
-*                    %control-AccDocument = if_abap_behv=>mk-on )
-*    ).
-
                 UPDATE yop_t_posdetail
                 SET acc_document = @lv_accdoc ,
-                    org_ref_doc  = @lv_orgrefdoc
+                    org_ref_doc  = @lv_orgrefdoc,
+                    gjahr        = @lv_gjahr
                 WHERE Bukrs = @<ls_header>-Bukrs AND
                      Bank_No = @<ls_header>-BankNo AND
                      Workplace_No = @<ls_header>-WorkplaceNo AND
