@@ -101,6 +101,12 @@
                       INTO DATA(lv_message).
 
               DATA(lv_accdoc) =  VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL ).
+              DATA(lv_bukrs) =  VALUE #( ls_commit_reported-journalentry[ 1 ]-CompanyCode OPTIONAL ).
+              DATA(lv_gjahr) =  VALUE #( ls_commit_reported-journalentry[ 1 ]-FiscalYear OPTIONAL ).
+
+              data(lv_orgrefdoc) = |{ lv_accdoc }{ lv_bukrs }{ lv_gjahr }|.
+
+
               IF lv_accdoc IS NOT INITIAL.
 
 
@@ -114,7 +120,8 @@
 *    ).
 
                 UPDATE yop_t_posdetail
-                SET acc_document = @lv_accdoc
+                SET acc_document = @lv_accdoc ,
+                    org_ref_doc  = @lv_orgrefdoc
                 WHERE Bukrs = @<ls_header>-Bukrs AND
                      Bank_No = @<ls_header>-BankNo AND
                      Workplace_No = @<ls_header>-WorkplaceNo AND
