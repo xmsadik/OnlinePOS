@@ -3,14 +3,14 @@
     DATA(lv_request_body) = request->get_text( ).
     DATA(lv_get_method) = request->get_method( ).
 
-    FIELD-SYMBOLS : <fs_messages> type BAPIRET2.
+    FIELD-SYMBOLS : <fs_messages> TYPE bapiret2.
 
     /ui2/cl_json=>deserialize( EXPORTING json = lv_request_body CHANGING data = ms_request ).
 *daha önce ters kaydı alınmış mı?
 
 
-   read table ms_request-header into data(ls_header) index 1.
-   check ls_header is not initial.
+    READ TABLE ms_request-header INTO DATA(ls_header) INDEX 1.
+    CHECK ls_header IS NOT INITIAL.
     SELECT SINGLE reversedocument
             FROM i_journalentry
             WHERE companycode = @ls_header-bukrs
@@ -31,7 +31,8 @@
       <jr>-accountingdocument = ls_header-acc_document.
       <jr>-%param             = VALUE #( postingdate    = ls_header-valuedate
                                          reversalreason = '1'
-                                         createdbyuser  = sy-uname  ).
+                                         createdbyuser  = sy-uname
+                                         ).
       MODIFY ENTITIES OF i_journalentrytp
       ENTITY journalentry
       EXECUTE reverse FROM lt_jr
