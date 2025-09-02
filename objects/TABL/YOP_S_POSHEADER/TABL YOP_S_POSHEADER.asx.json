@@ -81,7 +81,7 @@
   [
    {
     "TABNAME":"YOP_S_POSHEADER",
-    "FIELDNAME":"ACC_DOCUMENT",
+    "FIELDNAME":"ACCDOCUMENT",
     "AS4LOCAL":"N",
     "AS4VERS":0,
     "POSITION":13,
