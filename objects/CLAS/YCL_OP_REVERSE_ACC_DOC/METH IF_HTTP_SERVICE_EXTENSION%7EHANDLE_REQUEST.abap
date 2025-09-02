@@ -14,7 +14,7 @@
     SELECT SINGLE reversedocument
             FROM i_journalentry
             WHERE companycode = @ls_header-bukrs
-              AND accountingdocument = @ls_header-acc_document
+              AND accountingdocument = @ls_header-accdocument
               AND fiscalyear = @ls_header-gjahr
               AND isreversed = @abap_true
               INTO @DATA(lv_reversedocument).
@@ -28,7 +28,7 @@
       APPEND INITIAL LINE TO lt_jr ASSIGNING FIELD-SYMBOL(<jr>).
       <jr>-companycode        = ls_header-bukrs.
       <jr>-fiscalyear         = ls_header-gjahr.
-      <jr>-accountingdocument = ls_header-acc_document.
+      <jr>-accountingdocument = ls_header-accdocument.
       <jr>-%param             = VALUE #( postingdate    = ls_header-valuedate
                                          reversalreason = '1'
                                          createdbyuser  = sy-uname
