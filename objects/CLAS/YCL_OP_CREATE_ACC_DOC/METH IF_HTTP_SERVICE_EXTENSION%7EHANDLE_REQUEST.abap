@@ -114,7 +114,7 @@
 *    ).
 
                 UPDATE yop_t_posdetail
-                SET acc_belnr = @lv_accdoc
+                SET acc_document = @lv_accdoc
                 WHERE Bukrs = @<ls_header>-Bukrs AND
                      Bank_No = @<ls_header>-BankNo AND
                      Workplace_No = @<ls_header>-WorkplaceNo AND
@@ -122,19 +122,10 @@
                      Value_Date = @<ls_header>-ValueDate AND
                      Process_Type = @<ls_header>-ProcessType .
                 IF sy-subrc EQ 0.
+                  COMMIT WORK.
                 ENDIF.
 
-                SELECT *
-                FROM yop_t_posdetail
-                WHERE Bukrs = @<ls_header>-Bukrs AND
-                Bank_No = @<ls_header>-BankNo AND
-                Workplace_No = @<ls_header>-WorkplaceNo AND
-                Transaction_Date = @<ls_header>-TransactionDate AND
-                Value_Date = @<ls_header>-ValueDate AND
-                Process_Type = @<ls_header>-ProcessType
-                INTO TABLE @DATA(lt_deneme) .
-                IF sy-subrc EQ 0.
-                ENDIF.
+
 
               ENDIF.
 
