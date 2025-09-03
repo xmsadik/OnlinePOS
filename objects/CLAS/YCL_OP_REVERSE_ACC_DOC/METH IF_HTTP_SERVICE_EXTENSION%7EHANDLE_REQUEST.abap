@@ -25,10 +25,14 @@
 *              <fs_messages>-message = lv_message.
 *              <fs_messages>-message_v1 = lv_message.
     ELSE.
+      DATA: lv_accdoc TYPE belnr_d.
+
+      lv_accdoc = |{ ls_header-accdocument ALPHA = IN }|.
+
       APPEND INITIAL LINE TO lt_jr ASSIGNING FIELD-SYMBOL(<jr>).
       <jr>-companycode        = ls_header-bukrs.
       <jr>-fiscalyear         = ls_header-gjahr.
-      <jr>-accountingdocument = ls_header-accdocument.
+      <jr>-accountingdocument = lv_accdoc.
       <jr>-%param             = VALUE #( postingdate    = sy-datlo
                                          reversalreason = '01'
                                          createdbyuser  = sy-uname
@@ -58,9 +62,9 @@
 *        APPEND VALUE #( messagetype = ycl_eho_utils=>mc_success message = lv_message ) TO ms_response-messages.
       ELSE.
 
-           LOOP AT ls_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
+        LOOP AT ls_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
 
-          data(lv_message) = <ls_reported>-%msg->if_message~get_text( ).
+          DATA(lv_message) = <ls_reported>-%msg->if_message~get_text( ).
         ENDLOOP.
 
 *        LOOP AT ls_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
