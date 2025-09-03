@@ -30,7 +30,7 @@
       <jr>-fiscalyear         = ls_header-gjahr.
       <jr>-accountingdocument = ls_header-accdocument.
       <jr>-%param             = VALUE #( postingdate    = ls_header-valuedate
-                                         reversalreason = '1'
+                                         reversalreason = '01'
                                          createdbyuser  = sy-uname
                                          ).
       MODIFY ENTITIES OF i_journalentrytp
