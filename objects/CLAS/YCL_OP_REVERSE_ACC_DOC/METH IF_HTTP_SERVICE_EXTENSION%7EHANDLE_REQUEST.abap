@@ -56,10 +56,16 @@
 *        MESSAGE ID ycl_eho_utils=>mc_message_class TYPE ycl_eho_utils=>mc_success NUMBER 009 WITH ms_response-accountingdocument INTO lv_message.
 *        APPEND VALUE #( messagetype = ycl_eho_utils=>mc_success message = lv_message ) TO ms_response-messages.
       ELSE.
-        LOOP AT ls_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
-*          lv_message = <ls_reported>-%msg->if_message~get_text( ).
-*          APPEND VALUE #( messagetype = ycl_eho_utils=>mc_error message = lv_message ) TO ms_response-messages.
+
+           LOOP AT ls_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
+
+          data(lv_message) = <ls_reported>-%msg->if_message~get_text( ).
         ENDLOOP.
+
+*        LOOP AT ls_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
+**          lv_message = <ls_reported>-%msg->if_message~get_text( ).
+**          APPEND VALUE #( messagetype = ycl_eho_utils=>mc_error message = lv_message ) TO ms_response-messages.
+*        ENDLOOP.
         IF sy-subrc <> 0.
 *          MESSAGE ID ycl_eho_utils=>mc_message_class TYPE ycl_eho_utils=>mc_error NUMBER 008  INTO lv_message.
 *          APPEND VALUE #( messagetype = ycl_eho_utils=>mc_error message = lv_message ) TO ms_response-messages.
