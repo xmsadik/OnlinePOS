@@ -71,7 +71,7 @@
           MESSAGE ID ycl_eho_utils=>mc_message_class
           TYPE ycl_eho_utils=>mc_success
           NUMBER 016
-          WITH VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL )
+          WITH  lv_revdoc
           INTO DATA(lv_message).
 
 
@@ -94,24 +94,6 @@
 
           ENDIF.
 
-
-          EXIT.
-        ENDLOOP.
-        COMMIT ENTITIES END.
-
-
-
-*        MESSAGE ID ycl_eho_utils=>mc_message_class TYPE ycl_eho_utils=>mc_success NUMBER 009 WITH ms_response-accountingdocument INTO lv_message.
-*        APPEND VALUE #( messagetype = ycl_eho_utils=>mc_success message = lv_message ) TO ms_response-messages.
-      ELSE.
-
-        LOOP AT lt_commit_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
-
-          lv_message = <ls_reported>-%msg->if_message~get_text( ).
-
-
-        ENDLOOP.
-
         IF lv_message IS NOT INITIAL.
 
           APPEND INITIAL LINE TO ms_response-messages ASSIGNING <fs_messages>.
@@ -122,14 +104,15 @@
           response->set_text( lv_response_body ).
           response->set_header_field( i_name = mc_header_content i_value = mc_content_type ).
         ENDIF.
-*        LOOP AT ls_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
-**          lv_message = <ls_reported>-%msg->if_message~get_text( ).
-**          APPEND VALUE #( messagetype = ycl_eho_utils=>mc_error message = lv_message ) TO ms_response-messages.
-*        ENDLOOP.
-        IF sy-subrc <> 0.
-*          MESSAGE ID ycl_eho_utils=>mc_message_class TYPE ycl_eho_utils=>mc_error NUMBER 008  INTO lv_message.
-*          APPEND VALUE #( messagetype = ycl_eho_utils=>mc_error message = lv_message ) TO ms_response-messages.
-        ENDIF.
+
+          EXIT.
+        ENDLOOP.
+        COMMIT ENTITIES END.
+
+
+      ELSE.
+
+
       ENDIF.
     ENDIF.
   ENDMETHOD.
