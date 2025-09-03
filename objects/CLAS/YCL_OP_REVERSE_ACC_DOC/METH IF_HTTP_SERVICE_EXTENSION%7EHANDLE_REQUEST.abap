@@ -42,7 +42,7 @@
       ENTITY journalentry
       EXECUTE reverse FROM lt_jr
       FAILED DATA(ls_failed)
-      REPORTED DATA(ls_reported)
+      REPORTED DATA(ls_commit_reported)
       MAPPED DATA(ls_mapped).
       IF ls_failed-journalentry IS INITIAL.
         COMMIT ENTITIES BEGIN
@@ -58,15 +58,55 @@
         ENDLOOP.
         COMMIT ENTITIES END.
 
+        MESSAGE ID ycl_eho_utils=>mc_message_class
+        TYPE ycl_eho_utils=>mc_success
+        NUMBER 016
+        WITH VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL )
+        INTO DATA(lv_message).
+
+        DATA(lv_revdoc) =  VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL ).
+
+
+
+        IF lv_accdoc IS NOT INITIAL.
+
+          UPDATE yop_t_posdetail
+          SET acc_document = '',
+              rev_document = @lv_revdoc
+          WHERE Bukrs = @ls_header-Bukrs AND
+               Bank_No = @ls_header-BankNo AND
+               Workplace_No = @ls_header-WorkplaceNo AND
+               Transaction_Date = @ls_header-TransactionDate AND
+               Value_Date = @ls_header-ValueDate AND
+               Process_Type = @ls_header-ProcessType .
+          IF sy-subrc EQ 0.
+            COMMIT WORK.
+          ENDIF.
+
+
+        ENDIF.
+
 *        MESSAGE ID ycl_eho_utils=>mc_message_class TYPE ycl_eho_utils=>mc_success NUMBER 009 WITH ms_response-accountingdocument INTO lv_message.
 *        APPEND VALUE #( messagetype = ycl_eho_utils=>mc_success message = lv_message ) TO ms_response-messages.
       ELSE.
 
-        LOOP AT ls_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
+        LOOP AT lt_commit_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
 
-          DATA(lv_message) = <ls_reported>-%msg->if_message~get_text( ).
+          lv_message = <ls_reported>-%msg->if_message~get_text( ).
+
+
         ENDLOOP.
 
+        IF lv_message IS NOT INITIAL.
+
+          APPEND INITIAL LINE TO ms_response-messages ASSIGNING <fs_messages>.
+          <fs_messages>-message = lv_message.
+          <fs_messages>-message_v1 = lv_message.
+
+          DATA(lv_response_body) = /ui2/cl_json=>serialize( EXPORTING data = ms_response ).
+          response->set_text( lv_response_body ).
+          response->set_header_field( i_name = mc_header_content i_value = mc_content_type ).
+        ENDIF.
 *        LOOP AT ls_reported-journalentry ASSIGNING FIELD-SYMBOL(<ls_reported>).
 **          lv_message = <ls_reported>-%msg->if_message~get_text( ).
 **          APPEND VALUE #( messagetype = ycl_eho_utils=>mc_error message = lv_message ) TO ms_response-messages.
@@ -77,7 +117,4 @@
         ENDIF.
       ENDIF.
     ENDIF.
-    DATA(lv_response_body) = /ui2/cl_json=>serialize( EXPORTING data = ms_response ).
-    response->set_text( lv_response_body ).
-    response->set_header_field( i_name = mc_header_content i_value = mc_content_type ).
   ENDMETHOD.
