@@ -29,7 +29,7 @@
       <jr>-companycode        = ls_header-bukrs.
       <jr>-fiscalyear         = ls_header-gjahr.
       <jr>-accountingdocument = ls_header-accdocument.
-      <jr>-%param             = VALUE #( postingdate    = sy-datum
+      <jr>-%param             = VALUE #( postingdate    = sy-datlo
                                          reversalreason = '01'
                                          createdbyuser  = sy-uname
                                          ).
