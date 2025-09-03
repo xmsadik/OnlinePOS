@@ -52,7 +52,7 @@
         LOOP AT ls_mapped-journalentry ASSIGNING FIELD-SYMBOL(<ls_mapped>).
           CONVERT KEY OF i_journalentrytp FROM <ls_mapped>-%pid TO DATA(lv_key).
 
-          DATA(lv_acc)    = ls_commit_reported-journalentry[ 1 ]-accountingdocument.
+          DATA(lv_acc)    = lv_key.
           DATA lv_revdoc TYPE belnr_d.
           DATA lv_len    TYPE i.
           DATA lv_sub_len TYPE i.
