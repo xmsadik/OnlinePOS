@@ -29,9 +29,11 @@
       <jr>-companycode        = ls_header-bukrs.
       <jr>-fiscalyear         = ls_header-gjahr.
       <jr>-accountingdocument = ls_header-accdocument.
+      <jr>-%cid_ref          = 'Test1'.
       <jr>-%param             = VALUE #( postingdate    = sy-datlo
                                          reversalreason = '01'
                                          createdbyuser  = sy-uname
+
                                          ).
       MODIFY ENTITIES OF i_journalentrytp
       ENTITY journalentry
