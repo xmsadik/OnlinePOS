@@ -51,40 +51,55 @@
         REPORTED DATA(lt_commit_reported).
         LOOP AT ls_mapped-journalentry ASSIGNING FIELD-SYMBOL(<ls_mapped>).
           CONVERT KEY OF i_journalentrytp FROM <ls_mapped>-%pid TO DATA(lv_key).
-*          ms_response-companycode = lv_key-companycode.
-*          ms_response-fiscalyear = lv_key-fiscalyear.
-*          ms_response-accountingdocument = lv_key-accountingdocument.
+
+          DATA(lv_acc)    = ls_commit_reported-journalentry[ 1 ]-accountingdocument.
+          DATA lv_revdoc TYPE belnr_d.
+          DATA lv_len    TYPE i.
+          DATA lv_sub_len TYPE i.
+
+          lv_len = strlen( lv_acc ).
+
+          IF lv_len > 8. "9. karakter varsa
+            lv_sub_len = lv_len - 8. "9. karakterden itibaren kalan karakter sayısı
+            IF lv_sub_len > 10.
+              lv_sub_len = 10. "belnr_d alanı 10 karakter, fazla olmasın
+            ENDIF.
+            lv_revdoc = lv_acc+8(lv_sub_len). "substring al
+          ENDIF.
+
+
+          MESSAGE ID ycl_eho_utils=>mc_message_class
+          TYPE ycl_eho_utils=>mc_success
+          NUMBER 016
+          WITH VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL )
+          INTO DATA(lv_message).
+
+
+
+          IF lv_revdoc IS NOT INITIAL.
+
+            UPDATE yop_t_posdetail
+            SET acc_document = '',
+                rev_document = @lv_revdoc
+            WHERE Bukrs = @ls_header-Bukrs AND
+                 Bank_No = @ls_header-BankNo AND
+                 Workplace_No = @ls_header-WorkplaceNo AND
+                 Transaction_Date = @ls_header-TransactionDate AND
+                 Value_Date = @ls_header-ValueDate AND
+                 Process_Type = @ls_header-ProcessType .
+            IF sy-subrc EQ 0.
+              COMMIT WORK.
+            ENDIF.
+
+
+          ENDIF.
+
+
           EXIT.
         ENDLOOP.
         COMMIT ENTITIES END.
 
-        MESSAGE ID ycl_eho_utils=>mc_message_class
-        TYPE ycl_eho_utils=>mc_success
-        NUMBER 016
-        WITH VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL )
-        INTO DATA(lv_message).
 
-        DATA(lv_revdoc) =  VALUE #( ls_commit_reported-journalentry[ 1 ]-accountingdocument OPTIONAL ).
-
-
-
-        IF lv_accdoc IS NOT INITIAL.
-
-          UPDATE yop_t_posdetail
-          SET acc_document = '',
-              rev_document = @lv_revdoc
-          WHERE Bukrs = @ls_header-Bukrs AND
-               Bank_No = @ls_header-BankNo AND
-               Workplace_No = @ls_header-WorkplaceNo AND
-               Transaction_Date = @ls_header-TransactionDate AND
-               Value_Date = @ls_header-ValueDate AND
-               Process_Type = @ls_header-ProcessType .
-          IF sy-subrc EQ 0.
-            COMMIT WORK.
-          ENDIF.
-
-
-        ENDIF.
 
 *        MESSAGE ID ycl_eho_utils=>mc_message_class TYPE ycl_eho_utils=>mc_success NUMBER 009 WITH ms_response-accountingdocument INTO lv_message.
 *        APPEND VALUE #( messagetype = ycl_eho_utils=>mc_success message = lv_message ) TO ms_response-messages.
