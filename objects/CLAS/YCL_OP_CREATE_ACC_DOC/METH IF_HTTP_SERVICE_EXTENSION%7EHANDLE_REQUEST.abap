@@ -112,7 +112,8 @@
                 UPDATE yop_t_posdetail
                 SET acc_document = @lv_accdoc ,
                     org_ref_doc  = @lv_orgrefdoc,
-                    gjahr        = @lv_gjahr
+                    gjahr        = @lv_gjahr,
+                    rev_document = ''
                 WHERE Bukrs = @<ls_header>-Bukrs AND
                      Bank_No = @<ls_header>-BankNo AND
                      Workplace_No = @<ls_header>-WorkplaceNo AND
