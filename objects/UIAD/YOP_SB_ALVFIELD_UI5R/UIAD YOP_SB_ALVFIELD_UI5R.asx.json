@@ -4,18 +4,18 @@
   "data":
   [
    {
-    "APP_ID":"YONLINEPOS_CPIT_UI5R",
+    "APP_ID":"YOP_SB_ALVFIELD_UI5R",
     "CAT_ID":"SAP_TC_UI5_REPO_UIAD",
-    "SEM_OBJ":"YONLINEPOS_CPIT",
-    "SEM_ACT":"display",
-    "TARGET_MAPPING_ID":"UI5R_DC4FC0CE065AF3EF517275A69E44F878BDE903B1_TM",
-    "TILE_ID":"UI5R_DC4FC0CE065AF3EF517275A69E44F878BDE903B1_AL",
+    "SEM_OBJ":"yop_sb_alvfield",
+    "SEM_ACT":"manage",
+    "TARGET_MAPPING_ID":"UI5R_08770187718406960D4395E0FE9619128226EDB6_TM",
+    "TILE_ID":"UI5R_08770187718406960D4395E0FE9619128226EDB6_AL",
     "APP_TYPE":"U",
     "TCODE":"",
     "WD_APPL_ID":"",
     "WD_CONF_ID":"",
     "WCF_TARGET_ID":"",
-    "UI5_APP_ID":"onlineposcockpit",
+    "UI5_APP_ID":"yopsbalvfield",
     "FIORI_ID":"",
     "ICF_PATH":"",
     "SYSTEM_ALIAS":"",
@@ -33,7 +33,7 @@
     "REFRESH_INTERVALL":0,
     "DISPLAY_NUMBER_UNIT":"",
     "FLAVOR_ID":"",
-    "CHANGED_AT":"+020250915144454",
+    "CHANGED_AT":"+020250915145947",
     "CHANGED_BY":"SAP_CUSTOMER",
     "MASTERLANG":"",
     "ACH_COMPONENT":"",
@@ -56,12 +56,12 @@
   "data":
   [
    {
-    "APP_ID":"YONLINEPOS_CPIT_UI5R",
-    "TILE_ID":"UI5R_DC4FC0CE065AF3EF517275A69E44F878BDE903B1_AL",
+    "APP_ID":"YOP_SB_ALVFIELD_UI5R",
+    "TILE_ID":"UI5R_08770187718406960D4395E0FE9619128226EDB6_AL",
     "TILE_TYPE":"S",
     "CUSTOM_TILE_TYPE":"",
     "DEFAULT_TILE":"X",
-    "TILE_CONFIG_STRING":"{\"tileConfiguration\":\"{\\\"display_icon_url\\\":\\\"\\\",\\\"display_info_text\\\":\\\"\\\",\\\"display_title_text\\\":\\\"Online Pos Kokpit\\\",\\\"display_subtitle_text\\\":\\\"\\\",\\\"navigation_use_semantic_object\\\":true,\\\"navigation_target_url\\\":\\\"#YONLINEPOS_CPIT-display\\\",\\\"navigation_semantic_object\\\":\\\"YONLINEPOS_CPIT\\\",\\\"navigation_semantic_action\\\":\\\"display\\\",\\\"navigation_semantic_parameters\\\":\\\"\\\",\\\"display_search_keywords\\\":\\\"\\\",\\\"display_number_unit\\\":\\\"\\\",\\\"service_url\\\":\\\"\\\",\\\"service_refresh_interval\\\":0}\"}",
+    "TILE_CONFIG_STRING":"{\"tileConfiguration\":\"{\\\"display_icon_url\\\":\\\"\\\",\\\"display_info_text\\\":\\\"\\\",\\\"display_title_text\\\":\\\"Alv alanları\\\",\\\"display_subtitle_text\\\":\\\"\\\",\\\"navigation_use_semantic_object\\\":true,\\\"navigation_target_url\\\":\\\"#yop_sb_alvfield-manage\\\",\\\"navigation_semantic_object\\\":\\\"yop_sb_alvfield\\\",\\\"navigation_semantic_action\\\":\\\"manage\\\",\\\"navigation_semantic_parameters\\\":\\\"\\\",\\\"display_search_keywords\\\":\\\"\\\",\\\"display_number_unit\\\":\\\"\\\",\\\"service_url\\\":\\\"\\\",\\\"service_refresh_interval\\\":0}\"}",
     "TILE_ICON":"",
     "TILE_PARAMETERS":"",
     "SERVICE_BASE_URL":"",
@@ -79,9 +79,9 @@
   [
    {
     "LANGU":"E",
-    "APP_ID":"YONLINEPOS_CPIT_UI5R",
-    "TILE_ID":"UI5R_DC4FC0CE065AF3EF517275A69E44F878BDE903B1_AL",
-    "TILE_TITLE":"Online Pos Kokpit",
+    "APP_ID":"YOP_SB_ALVFIELD_UI5R",
+    "TILE_ID":"UI5R_08770187718406960D4395E0FE9619128226EDB6_AL",
+    "TILE_TITLE":"Alv alanları",
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":""
@@ -93,14 +93,14 @@
   "data":
   [
    {
-    "APP_ID":"YONLINEPOS_CPIT_UI5R",
+    "APP_ID":"YOP_SB_ALVFIELD_UI5R",
     "LANGU":"E",
-    "TILE_TITLE":"Online Pos Kokpit",
+    "TILE_TITLE":"Alv alanları",
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"Online Pos Kokpit",
-    "DESCRIPTION":"Online Pos Kokpit"
+    "ALT_SMART_LINK_TITLE":"Alv alanları",
+    "DESCRIPTION":"ALV Alanları"
    }
   ]
  },
@@ -111,7 +111,7 @@
    {
     "PGMID":"R3TR",
     "OBJECT":"UIAD",
-    "OBJ_NAME":"YONLINEPOS_CPIT_UI5R",
+    "OBJ_NAME":"YOP_SB_ALVFIELD_UI5R",
     "KORRNUM":"",
     "SRCSYSTEM":"...",
     "AUTHOR":"SAP_CUSTOMER",
