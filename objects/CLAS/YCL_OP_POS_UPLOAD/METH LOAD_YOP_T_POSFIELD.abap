@@ -1,4873 +1,3666 @@
-  METHOD LOAD_YOP_T_POSFIELD.
-    DATA lt_tab TYPE TABLE OF YOP_T_POSFIELD.
+  METHOD load_yop_t_posfield.
+    DATA lt_tab TYPE TABLE OF yop_t_posfield.
     DATA ls_tab LIKE LINE OF lt_tab.
 
-    ls_tab-BUKRS = '1000'.
+    DELETE FROM yop_t_posfield.
+    COMMIT WORK.
+
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'Zincir No'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'Zincir No'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'Uye Isyeri No'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'Uye Isyeri No'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'Terminal Id'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'Terminal Id'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'Uye Isyeri Adi'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'Uye Isyeri Adi'.
+    ls_tab-alv_field = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'Islem Tarihi'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'Islem Tarihi'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'Gunsonutarihi'.
-    ls_tab-ALV_FIELD = 'ZZEND_OF_DAY_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'Gunsonutarihi'.
+    ls_tab-alv_field = 'ZZEND_OF_DAY_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'Kart No'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'Kart No'.
+    ls_tab-alv_field = 'CARD_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'Ana Kart Tipi'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'Ana Kart Tipi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'Alt Kart Tipi'.
-    ls_tab-ALV_FIELD = 'CARD_TYPE'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'Alt Kart Tipi'.
+    ls_tab-alv_field = 'CARD_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'Islem Tipi'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'Islem Tipi'.
+    ls_tab-alv_field = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'Provizyon No'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'Provizyon No'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'Taksit Sira'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_ORDER'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'Taksit Sira'.
+    ls_tab-alv_field = 'INSTALLMENT_ORDER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'Taksit Sayi'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_NUMBER'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'Taksit Sayi'.
+    ls_tab-alv_field = 'INSTALLMENT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'Provizyon Tutari'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'Provizyon Tutari'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'Komisyon Tutari'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'Komisyon Tutari'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'Eo Kes Tut'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'Eo Kes Tut'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'Net Tutar'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'Net Tutar'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'Valortarihi'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'Valortarihi'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'İklcom Chip'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'İklcom Chip'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'Vrcom Chip'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'Vrcom Chip'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'Kesilen Chip'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'Kesilen Chip'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'Net Chip'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'Net Chip'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'Chip Para Valor Tarihi'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'Chip Para Valor Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'Aud Key'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'Aud Key'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'Mevduat Hesap No'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'Mevduat Hesap No'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'Uye Isyeri Mbb No'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'Uye Isyeri Mbb No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'Banka Kodu'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'Banka Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 1.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'Uyb Mev Iban No'.
-    ls_tab-ALV_FIELD = 'ZZIBAN'.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field = 'Uyb Mev Iban No'.
+    ls_tab-alv_field = 'ZZIBAN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'Üye No'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'Üye No'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'Üye Adı'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'Üye Adı'.
+    ls_tab-alv_field = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'Servis Kodu'.
-    ls_tab-ALV_FIELD = 'card_type'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'Servis Kodu'.
+    ls_tab-alv_field = 'card_type'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'Açıklama'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'Açıklama'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'Komisyon Oranı'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'Komisyon Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'Komisyon Tutar'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'Komisyon Tutar'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'Bloke Süresi'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'Bloke Süresi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'Bloke Tipi'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'Bloke Tipi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'Yükleme Tarihi'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'Yükleme Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'Ödeme Tarihi'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'Ödeme Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'İşlem Açıklama'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'İşlem Açıklama'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'İşlem Tipi'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'İşlem Tipi'.
+    ls_tab-alv_field = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'İşlem Tarihi'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'İşlem Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'Term ID'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'Term ID'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'KTS'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'KTS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'UTS'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'UTS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'Tutar'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'Tutar'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'Puan'.
-    ls_tab-ALV_FIELD = 'commission_amount'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'Puan'.
+    ls_tab-alv_field = 'commission_amount'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'Provizyon Kodu'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'Provizyon Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'Kart No'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'Kart No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'Net Hesaba Geçen'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'Net Hesaba Geçen'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'İşlem Saati'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'İşlem Saati'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'Bloke Hesap No'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'Bloke Hesap No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'Vadesiz Hesap No'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'Vadesiz Hesap No'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'STAN No'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'STAN No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'Referans No'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'Referans No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'Bloke Tarihi'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'Bloke Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'Çözülme Tarihi'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD/MM/YYYY'.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field = 'Çözülme Tarihi'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'DD/MM/YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'Hesaba Geçiş Tarihi'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD/MM/YYYY'.
+    ls_tab-bank_field_no = 29.
+    ls_tab-bank_field = 'Hesaba Geçiş Tarihi'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD/MM/YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'Vadesiz IBAN'.
-    ls_tab-ALV_FIELD = 'ZZIBAN'.
+    ls_tab-bank_field_no = 30.
+    ls_tab-bank_field = 'Vadesiz IBAN'.
+    ls_tab-alv_field = 'ZZIBAN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'Para Birimi'.
+    ls_tab-bank_field_no = 31.
+    ls_tab-bank_field = 'Para Birimi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'UyeIndirimTutar'.
+    ls_tab-bank_field_no = 32.
+    ls_tab-bank_field = 'UyeIndirimTutar'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'Taksitli İşlem Ücreti'.
+    ls_tab-bank_field_no = 33.
+    ls_tab-bank_field = 'Taksitli İşlem Ücreti'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'İşlem Kodu Açıklaması'.
+    ls_tab-bank_field_no = 34.
+    ls_tab-bank_field = 'İşlem Kodu Açıklaması'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'Komisyon Tutarı(Döviz)'.
+    ls_tab-bank_field_no = 35.
+    ls_tab-bank_field = 'Komisyon Tutarı(Döviz)'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'Kur'.
+    ls_tab-bank_field_no = 36.
+    ls_tab-bank_field = 'Kur'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'Puan (Döviz)'.
+    ls_tab-bank_field_no = 37.
+    ls_tab-bank_field = 'Puan (Döviz)'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'Taksitli İşlem Ücreti Toplamı'.
+    ls_tab-bank_field_no = 38.
+    ls_tab-bank_field = 'Taksitli İşlem Ücreti Toplamı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 39.
-    ls_tab-BANK_FIELD = 'Tutar (Döviz)'.
+    ls_tab-bank_field_no = 39.
+    ls_tab-bank_field = 'Tutar (Döviz)'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 40.
-    ls_tab-BANK_FIELD = 'Müşteri No'.
+    ls_tab-bank_field_no = 40.
+    ls_tab-bank_field = 'Müşteri No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 41.
-    ls_tab-BANK_FIELD = 'Taksitli İşlem Ücreti Toplamı'.
+    ls_tab-bank_field_no = 41.
+    ls_tab-bank_field = 'Taksitli İşlem Ücreti Toplamı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 42.
-    ls_tab-BANK_FIELD = 'Üye Grup No'.
+    ls_tab-bank_field_no = 42.
+    ls_tab-bank_field = 'Üye Grup No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 43.
-    ls_tab-BANK_FIELD = 'Store No'.
+    ls_tab-bank_field_no = 43.
+    ls_tab-bank_field = 'Store No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 44.
-    ls_tab-BANK_FIELD = 'Sipariş No'.
+    ls_tab-bank_field_no = 44.
+    ls_tab-bank_field = 'Sipariş No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 45.
-    ls_tab-BANK_FIELD = 'OTS'.
+    ls_tab-bank_field_no = 45.
+    ls_tab-bank_field = 'OTS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 46.
-    ls_tab-BANK_FIELD = 'Batch No'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 46.
+    ls_tab-bank_field = 'Batch No'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 47.
-    ls_tab-BANK_FIELD = 'Kart Sahibi Adı'.
+    ls_tab-bank_field_no = 47.
+    ls_tab-bank_field = 'Kart Sahibi Adı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 48.
-    ls_tab-BANK_FIELD = 'Taksit Sırası'.
+    ls_tab-bank_field_no = 48.
+    ls_tab-bank_field = 'Taksit Sırası'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 49.
-    ls_tab-BANK_FIELD = 'Kampanyasız Komisyon'.
+    ls_tab-bank_field_no = 49.
+    ls_tab-bank_field = 'Kampanyasız Komisyon'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 50.
-    ls_tab-BANK_FIELD = 'Kampanyasız Bloke Valör'.
+    ls_tab-bank_field_no = 50.
+    ls_tab-bank_field = 'Kampanyasız Bloke Valör'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 51.
-    ls_tab-BANK_FIELD = 'Turkcell Sipariş No'.
+    ls_tab-bank_field_no = 51.
+    ls_tab-bank_field = 'Turkcell Sipariş No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 52.
-    ls_tab-BANK_FIELD = 'GSM No'.
+    ls_tab-bank_field_no = 52.
+    ls_tab-bank_field = 'GSM No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 53.
-    ls_tab-BANK_FIELD = 'Bayii Kodu'.
+    ls_tab-bank_field_no = 53.
+    ls_tab-bank_field = 'Bayii Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 54.
-    ls_tab-BANK_FIELD = 'Turkcell Fatura No'.
+    ls_tab-bank_field_no = 54.
+    ls_tab-bank_field = 'Turkcell Fatura No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 55.
-    ls_tab-BANK_FIELD = 'BSMV Tutar'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 55.
+    ls_tab-bank_field = 'BSMV Tutar'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 56.
-    ls_tab-BANK_FIELD = 'Üst Bayi Üye No'.
+    ls_tab-bank_field_no = 56.
+    ls_tab-bank_field = 'Üst Bayi Üye No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 57.
-    ls_tab-BANK_FIELD = 'Banka Anahtarı'.
+    ls_tab-bank_field_no = 57.
+    ls_tab-bank_field = 'Banka Anahtarı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 58.
-    ls_tab-BANK_FIELD = 'Kart Tipi'.
+    ls_tab-bank_field_no = 58.
+    ls_tab-bank_field = 'Kart Tipi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 59.
-    ls_tab-BANK_FIELD = 'RRN'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 59.
+    ls_tab-bank_field = 'RRN'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 60.
-    ls_tab-BANK_FIELD = 'Kart Markası'.
+    ls_tab-bank_field_no = 60.
+    ls_tab-bank_field = 'Kart Markası'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'UYEISY'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'UYEISY'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'TRMNO'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'TRMNO'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'TKSTID'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'TKSTID'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'ISLTAR'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'ISLTAR'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'KRTNO'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'KRTNO'.
+    ls_tab-alv_field = 'CARD_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'KART_TIP'.
-    ls_tab-ALV_FIELD = 'CARD_TYPE'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'KART_TIP'.
+    ls_tab-alv_field = 'CARD_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'ORJTUT'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'ORJTUT'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'BLOKCOZTAR'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'BLOKCOZTAR'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'NETODMTUT'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'NETODMTUT'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'KMSYN'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'KMSYN'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'KPAY'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'KPAY'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'ERKODMTUT'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'ERKODMTUT'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'ERKBLKKOM'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'ERKBLKKOM'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'TKSTADEDI'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'TKSTADEDI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'TKSTSIRASI'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'TKSTSIRASI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'SUBE'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'SUBE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'TIP'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'TIP'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'HSP'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'HSP'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'ISLTIP'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'ISLTIP'.
+    ls_tab-alv_field = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'CIF_CUSTNO'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'CIF_CUSTNO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'PRVZTAR'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'PRVZTAR'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'IADEUYEISY'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'IADEUYEISY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'AUTH_NBR'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'AUTH_NBR'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'REFERANS_NO'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'REFERANS_NO'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'DETAY_TAKSIT_TOPLAM_TUTAR_CCY'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'DETAY_TAKSIT_TOPLAM_TUTAR_CCY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'DETAY_TAKSIT_TOPLAM_TUTAR_ORJ'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'DETAY_TAKSIT_TOPLAM_TUTAR_ORJ'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'SANAL_POS_ID'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'SANAL_POS_ID'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'YENI_UYEISY'.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field = 'YENI_UYEISY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'TABELA_UNVANI'.
+    ls_tab-bank_field_no = 29.
+    ls_tab-bank_field = 'TABELA_UNVANI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'ISLSAATI'.
-    ls_tab-TIME_FORMAT = 'HH:MM:SS'.
+    ls_tab-bank_field_no = 30.
+    ls_tab-bank_field = 'ISLSAATI'.
+    ls_tab-time_format = 'HH:MM:SS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'Valor'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'Valor'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'İşlem Tarihi'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'İşlem Tarihi'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'Gün Sonu Tarihi'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'Gün Sonu Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'Mono'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'Mono'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'Zincir No'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'Zincir No'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'Üye No'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'Üye No'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'Teriminal No'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'Teriminal No'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'Üye Adı'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'Üye Adı'.
+    ls_tab-alv_field = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'Kart No'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'Kart No'.
+    ls_tab-alv_field = 'CARD_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'Batch No'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'Batch No'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'Taksit Sayısı'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_NUMBER'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'Taksit Sayısı'.
+    ls_tab-alv_field = 'INSTALLMENT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'Taksit No'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_ORDER'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'Taksit No'.
+    ls_tab-alv_field = 'INSTALLMENT_ORDER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'Kart Tipi'.
-    ls_tab-ALV_FIELD = 'CARD_TYPE'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'Kart Tipi'.
+    ls_tab-alv_field = 'CARD_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'IslemTipi'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'IslemTipi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'İşlem Tipi'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'İşlem Tipi'.
+    ls_tab-alv_field = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'İşlem Kodu'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'İşlem Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'İşlem Alt Kodu'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'İşlem Alt Kodu'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'İşlem Açıklaması'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'İşlem Açıklaması'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'Provizyon No'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'Provizyon No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'İşlem Tutarı'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'İşlem Tutarı'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'Net Tutar'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'Net Tutar'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'Komisyon Oranı'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'Komisyon Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'Komisyon Tutarı'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'Komisyon Tutarı'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'IKP'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'IKP'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'BKP'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'BKP'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'BKB'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'BKB'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'IKB'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'IKB'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'Hizmet Ücreti'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field = 'Hizmet Ücreti'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'Bloke Süresi'.
-    ls_tab-ALV_FIELD = 'ZZEND_OF_DAY_DATE'.
-    ls_tab-DATE_FORMAT = 'DDMMYYYY'.
+    ls_tab-bank_field_no = 29.
+    ls_tab-bank_field = 'Bloke Süresi'.
+    ls_tab-alv_field = 'ZZEND_OF_DAY_DATE'.
+    ls_tab-date_format = 'DDMMYYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'Bloke No'.
+    ls_tab-bank_field_no = 30.
+    ls_tab-bank_field = 'Bloke No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'Hesap No'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 31.
+    ls_tab-bank_field = 'Hesap No'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'Bloke Hesap No'.
-    ls_tab-ALV_FIELD = 'CARD_TYPE'.
+    ls_tab-bank_field_no = 32.
+    ls_tab-bank_field = 'Bloke Hesap No'.
+    ls_tab-alv_field = 'CARD_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'Para Birimi'.
+    ls_tab-bank_field_no = 33.
+    ls_tab-bank_field = 'Para Birimi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'İşlem Saati'.
-    ls_tab-ALV_FIELD = 'ZZTRANSACTION_TIME'.
-    ls_tab-TIME_FORMAT = 'HH:MM:SS'.
+    ls_tab-bank_field_no = 34.
+    ls_tab-bank_field = 'İşlem Saati'.
+    ls_tab-alv_field = 'ZZTRANSACTION_TIME'.
+    ls_tab-time_format = 'HH:MM:SS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'Hesap Hareket Aciklama'.
+    ls_tab-bank_field_no = 35.
+    ls_tab-bank_field = 'Hesap Hareket Aciklama'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'İşlem Adet'.
+    ls_tab-bank_field_no = 36.
+    ls_tab-bank_field = 'İşlem Adet'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'Transfer Fiş No'.
+    ls_tab-bank_field_no = 37.
+    ls_tab-bank_field = 'Transfer Fiş No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'Kart Tipi1'.
+    ls_tab-bank_field_no = 38.
+    ls_tab-bank_field = 'Kart Tipi1'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 39.
-    ls_tab-BANK_FIELD = 'Kart Owner'.
+    ls_tab-bank_field_no = 39.
+    ls_tab-bank_field = 'Kart Owner'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 40.
-    ls_tab-BANK_FIELD = 'Brand Owner'.
+    ls_tab-bank_field_no = 40.
+    ls_tab-bank_field = 'Brand Owner'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 41.
-    ls_tab-BANK_FIELD = 'İşlem Açıklaması1'.
+    ls_tab-bank_field_no = 41.
+    ls_tab-bank_field = 'İşlem Açıklaması1'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 42.
-    ls_tab-BANK_FIELD = 'Şube Kodu'.
+    ls_tab-bank_field_no = 42.
+    ls_tab-bank_field = 'Şube Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 43.
-    ls_tab-BANK_FIELD = 'Kur Bilgisi'.
+    ls_tab-bank_field_no = 43.
+    ls_tab-bank_field = 'Kur Bilgisi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 44.
-    ls_tab-BANK_FIELD = 'İşlem Kayıt Tarihi'.
+    ls_tab-bank_field_no = 44.
+    ls_tab-bank_field = 'İşlem Kayıt Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 45.
-    ls_tab-BANK_FIELD = 'İşlem Kayıt Saati'.
+    ls_tab-bank_field_no = 45.
+    ls_tab-bank_field = 'İşlem Kayıt Saati'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 46.
-    ls_tab-BANK_FIELD = 'İşlem No'.
+    ls_tab-bank_field_no = 46.
+    ls_tab-bank_field = 'İşlem No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 47.
-    ls_tab-BANK_FIELD = 'Sipariş No'.
+    ls_tab-bank_field_no = 47.
+    ls_tab-bank_field = 'Sipariş No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'Gerçekleşen İşlemler'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'Gerçekleşen İşlemler'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'Banka Vergi Sicil No'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'Banka Vergi Sicil No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'Banka Vergi Dairesi'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'Banka Vergi Dairesi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'Merkez No'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'Merkez No'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'İşyeri No'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'İşyeri No'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'Ticari Unvan'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'Ticari Unvan'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'İşletme Adı'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'İşletme Adı'.
+    ls_tab-alv_field = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'Bölüm Numarası'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'Bölüm Numarası'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'Bölüm Adı'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'Bölüm Adı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'Cari Hesap'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'Cari Hesap'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'VKN/TCKN'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'VKN/TCKN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'İşlem Tarihi'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'İşlem Tarihi'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'İşlem Zamanı'.
-    ls_tab-ALV_FIELD = 'ZZTRANSACTION_TIME'.
-    ls_tab-TIME_FORMAT = 'HH:MM:SS'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'İşlem Zamanı'.
+    ls_tab-alv_field = 'ZZTRANSACTION_TIME'.
+    ls_tab-time_format = 'HH:MM:SS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'İşlem Türü'.
-    ls_tab-ALV_FIELD = 'ZZDESCRIPTION'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'İşlem Türü'.
+    ls_tab-alv_field = 'ZZDESCRIPTION'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'İşlem Tipi'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'İşlem Tipi'.
+    ls_tab-alv_field = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'İşlem Tutarı'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'İşlem Tutarı'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'Taksit Tarihi'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'Taksit Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'Taksit Sayısı'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_NUMBER'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'Taksit Sayısı'.
+    ls_tab-alv_field = 'INSTALLMENT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'Taksit No'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_ORDER'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'Taksit No'.
+    ls_tab-alv_field = 'INSTALLMENT_ORDER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'Taksit Tutarı'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'Taksit Tutarı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'Gün Sonu Tarihi'.
-    ls_tab-ALV_FIELD = 'ZZEND_OF_DAY_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'Gün Sonu Tarihi'.
+    ls_tab-alv_field = 'ZZEND_OF_DAY_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'Hesaba Geçiş Tarihi'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'Hesaba Geçiş Tarihi'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'POS No'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'POS No'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'POS İşlem No'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'POS İşlem No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'Onay Kodu'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'Onay Kodu'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'Kart No'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'Kart No'.
+    ls_tab-alv_field = 'CARD_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'İşyeri Ücreti Pşn/Tkst(Oran)'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'İşyeri Ücreti Pşn/Tkst(Oran)'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'İşyeri Ücreti Pşn/Tkst(Tutar)'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field = 'İşyeri Ücreti Pşn/Tkst(Tutar)'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'İşyeri Ücreti Pşn/Tkst(Maximum'.
+    ls_tab-bank_field_no = 29.
+    ls_tab-bank_field = 'İşyeri Ücreti Pşn/Tkst(Maximum'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'İşyeri Ücreti Pşn/Tkst(Maximum'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 30.
+    ls_tab-bank_field = 'İşyeri Ücreti Pşn/Tkst(Maximum'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'İşyeri Puan Katkı Oranı'.
+    ls_tab-bank_field_no = 31.
+    ls_tab-bank_field = 'İşyeri Puan Katkı Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'İşyeri Puan Katkı Tutarı'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 32.
+    ls_tab-bank_field = 'İşyeri Puan Katkı Tutarı'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'Üye İşyeri Ücreti Taksit (Oran'.
+    ls_tab-bank_field_no = 33.
+    ls_tab-bank_field = 'Üye İşyeri Ücreti Taksit (Oran'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'Üye İşyeri Ücreti Taksit (Tuta'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 34.
+    ls_tab-bank_field = 'Üye İşyeri Ücreti Taksit (Tuta'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'Merkez Puan Katkı Oranı'.
+    ls_tab-bank_field_no = 35.
+    ls_tab-bank_field = 'Merkez Puan Katkı Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'Merkez Puan Katkı Tutarı'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 36.
+    ls_tab-bank_field = 'Merkez Puan Katkı Tutarı'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'Merkez Ücreti Taksit (Oran)'.
+    ls_tab-bank_field_no = 37.
+    ls_tab-bank_field = 'Merkez Ücreti Taksit (Oran)'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'Merkez Ücreti Taksit (Tutar)'.
+    ls_tab-bank_field_no = 38.
+    ls_tab-bank_field = 'Merkez Ücreti Taksit (Tutar)'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 39.
-    ls_tab-BANK_FIELD = 'Merkez Ücreti Pşn/Tkst(Maximum'.
+    ls_tab-bank_field_no = 39.
+    ls_tab-bank_field = 'Merkez Ücreti Pşn/Tkst(Maximum'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 40.
-    ls_tab-BANK_FIELD = 'Merkez Ücreti Pşn/Tkst(Maximum'.
+    ls_tab-bank_field_no = 40.
+    ls_tab-bank_field = 'Merkez Ücreti Pşn/Tkst(Maximum'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 41.
-    ls_tab-BANK_FIELD = 'Para Birimi'.
+    ls_tab-bank_field_no = 41.
+    ls_tab-bank_field = 'Para Birimi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 42.
-    ls_tab-BANK_FIELD = 'Net Tutar'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 42.
+    ls_tab-bank_field = 'Net Tutar'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 43.
-    ls_tab-BANK_FIELD = 'Üye İşyeri Bilgisi'.
+    ls_tab-bank_field_no = 43.
+    ls_tab-bank_field = 'Üye İşyeri Bilgisi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 44.
-    ls_tab-BANK_FIELD = 'Recurring ID'.
+    ls_tab-bank_field_no = 44.
+    ls_tab-bank_field = 'Recurring ID'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 45.
-    ls_tab-BANK_FIELD = 'Recurring Sıra No'.
+    ls_tab-bank_field_no = 45.
+    ls_tab-bank_field = 'Recurring Sıra No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 46.
-    ls_tab-BANK_FIELD = 'Brand'.
-    ls_tab-ALV_FIELD = 'CARD_TYPE'.
+    ls_tab-bank_field_no = 46.
+    ls_tab-bank_field = 'Brand'.
+    ls_tab-alv_field = 'CARD_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'MUTA NO'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'MUTA NO'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'TİCARİ UNVAN'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'TİCARİ UNVAN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'VERGİ NO'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'VERGİ NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'ÜYE NO'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'ÜYE NO'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'ÜYE ADI'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'ÜYE ADI'.
+    ls_tab-alv_field = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'TERM_NO'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'TERM_NO'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'ISLEM_TARİHİ'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'ISLEM_TARİHİ'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'İŞLEM SAATİ'.
-    ls_tab-ALV_FIELD = 'ZZTRANSACTION_TIME'.
-    ls_tab-TIME_FORMAT = 'HHMMSS'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'İŞLEM SAATİ'.
+    ls_tab-alv_field = 'ZZTRANSACTION_TIME'.
+    ls_tab-time_format = 'HHMMSS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'VALOR_TARİHİ'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'VALOR_TARİHİ'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'TAKSİT SAYISI'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_ORDER'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'TAKSİT SAYISI'.
+    ls_tab-alv_field = 'INSTALLMENT_ORDER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'TOPLAM TAKSİT'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_NUMBER'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'TOPLAM TAKSİT'.
+    ls_tab-alv_field = 'INSTALLMENT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'KART_NO'.
-    ls_tab-ALV_FIELD = 'card_no'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'KART_NO'.
+    ls_tab-alv_field = 'card_no'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'KART_TİPİ'.
-    ls_tab-ALV_FIELD = 'card_type'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'KART_TİPİ'.
+    ls_tab-alv_field = 'card_type'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'URUN_TİPİ'.
-    ls_tab-ALV_FIELD = 'process_type'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'URUN_TİPİ'.
+    ls_tab-alv_field = 'process_type'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'ONLINE_FLAG'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'ONLINE_FLAG'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'SERVIS_KODU'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'SERVIS_KODU'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'ISLEM_TİPİ'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'ISLEM_TİPİ'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'PROV_NO'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'PROV_NO'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'BRÜT_TUTAR'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'BRÜT_TUTAR'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'KOMİSYON_ORANI'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'KOMİSYON_ORANI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'KOMİSYON_TUTAR'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'KOMİSYON_TUTAR'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'HİZMET_KOM ORAN'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'HİZMET_KOM ORAN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'HİZMET_KOM_TUTAR'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'HİZMET_KOM_TUTAR'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'IKP ORAN'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'IKP ORAN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'IKP TUTAR'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'IKP TUTAR'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'NET_TUTAR'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'NET_TUTAR'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'DOVİZ'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'DOVİZ'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'SİPARİŞ NUMARASI'.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field = 'SİPARİŞ NUMARASI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'Bloke Süresi'.
+    ls_tab-bank_field_no = 29.
+    ls_tab-bank_field = 'Bloke Süresi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'Bloke Tipi'.
+    ls_tab-bank_field_no = 30.
+    ls_tab-bank_field = 'Bloke Tipi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'Bloke Hesap No'.
+    ls_tab-bank_field_no = 31.
+    ls_tab-bank_field = 'Bloke Hesap No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'Taksitli Bloke Hesap No'.
+    ls_tab-bank_field_no = 32.
+    ls_tab-bank_field = 'Taksitli Bloke Hesap No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'Vadesiz Hesap No'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 33.
+    ls_tab-bank_field = 'Vadesiz Hesap No'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'ŞUBE KODU'.
+    ls_tab-bank_field_no = 34.
+    ls_tab-bank_field = 'ŞUBE KODU'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'ŞUBE ADI'.
+    ls_tab-bank_field_no = 35.
+    ls_tab-bank_field = 'ŞUBE ADI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'İŞLEM AÇIKLAMA'.
+    ls_tab-bank_field_no = 36.
+    ls_tab-bank_field = 'İŞLEM AÇIKLAMA'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'GÜNSONU TARİHİ'.
-    ls_tab-ALV_FIELD = 'ZZEND_OF_DAY_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 37.
+    ls_tab-bank_field = 'GÜNSONU TARİHİ'.
+    ls_tab-alv_field = 'ZZEND_OF_DAY_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'BLOKE NO'.
+    ls_tab-bank_field_no = 38.
+    ls_tab-bank_field = 'BLOKE NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 39.
-    ls_tab-BANK_FIELD = 'BANKA KODU'.
+    ls_tab-bank_field_no = 39.
+    ls_tab-bank_field = 'BANKA KODU'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 40.
-    ls_tab-BANK_FIELD = 'İŞLEM KODU'.
+    ls_tab-bank_field_no = 40.
+    ls_tab-bank_field = 'İŞLEM KODU'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 41.
-    ls_tab-BANK_FIELD = 'İŞLEM TÜRÜ'.
+    ls_tab-bank_field_no = 41.
+    ls_tab-bank_field = 'İŞLEM TÜRÜ'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'VALOR'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'VALOR'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'SUBE'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'SUBE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'HESAPNO'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'HESAPNO'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'ISYERINO'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'ISYERINO'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'BRUT_TUTAR'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'BRUT_TUTAR'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'KOMISYON'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'KOMISYON'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'NET_TUTAR'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'NET_TUTAR'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'ISLEMTARIH'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'ISLEMTARIH'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'ISLEM'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'ISLEM'.
+    ls_tab-alv_field = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'URUN'.
-    ls_tab-ALV_FIELD = 'card_type'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'URUN'.
+    ls_tab-alv_field = 'card_type'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'SERVİS KOM.'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'SERVİS KOM.'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'ODUL_KATKISI'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'ODUL_KATKISI'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'ANA_MERKEZ_ODUL'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'ANA_MERKEZ_ODUL'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'ANAMRK_SERVİS KOM.'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'ANAMRK_SERVİS KOM.'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'FIRMA'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'FIRMA'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'IBAN'.
-    ls_tab-ALV_FIELD = 'ZZIBAN'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'IBAN'.
+    ls_tab-alv_field = 'ZZIBAN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'ISYERISOSYALKATKI'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'ISYERISOSYALKATKI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'PROGRAMUCRETI'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'PROGRAMUCRETI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'ANAMRKSOSYALKATKI'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'ANAMRKSOSYALKATKI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'ANAMRKPRGRAMUCRET'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'ANAMRKPRGRAMUCRET'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'SERVİS ÜCRET TİPİ'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'SERVİS ÜCRET TİPİ'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'BATCHN'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'BATCHN'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'TERMİNALN'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'TERMİNALN'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'KART NUMARASI'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'KART NUMARASI'.
+    ls_tab-alv_field = 'CARD_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'İŞYERİ BİLGİSİ'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'İŞYERİ BİLGİSİ'.
+    ls_tab-alv_field = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'RETREF NO'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'RETREF NO'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'SİPARİŞ NUMARASI'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'SİPARİŞ NUMARASI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'Zincir No'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'Zincir No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'İşyeri No'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'İşyeri No'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'İşyeri Adı'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'İşyeri Adı'.
+    ls_tab-alv_field = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'İşlem Tarihi'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'İşlem Tarihi'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'İşlenme Tarihi'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'İşlenme Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'POS No'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'POS No'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'Batch No'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'Batch No'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'İşlem No'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'İşlem No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'Kart No'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'Kart No'.
+    ls_tab-alv_field = 'CARD_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'İşlem Tipi'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'İşlem Tipi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'Taksit Sıra'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'Taksit Sıra'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'Hesaba Geçiş Tarihi'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'Hesaba Geçiş Tarihi'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'Brüt Tutar'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'Brüt Tutar'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'Komisyon'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'Komisyon'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'VakıfPara'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'VakıfPara'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'Net Tutar'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'Net Tutar'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'Onay Kodu'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'Onay Kodu'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'Para Cinsi'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'Para Cinsi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'Taksit Sayısı'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'Taksit Sayısı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'Servis Kodu'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'Servis Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'Komisyon Oranı'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'Komisyon Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'Bloke Suresi'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'Bloke Suresi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'Bloke Tipi'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'Bloke Tipi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'UTS'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'UTS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'Islem Saati'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'Islem Saati'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'Bayi Kodu'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'Bayi Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'Vadesiz Hesap No'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'Vadesiz Hesap No'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'Orijinal Islem Tutari'.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field = 'Orijinal Islem Tutari'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'Orijinal Komisyon'.
+    ls_tab-bank_field_no = 29.
+    ls_tab-bank_field = 'Orijinal Komisyon'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'Orijinal Net Tutar'.
+    ls_tab-bank_field_no = 30.
+    ls_tab-bank_field = 'Orijinal Net Tutar'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'Çapraz Kur Bilgisi'.
+    ls_tab-bank_field_no = 31.
+    ls_tab-bank_field = 'Çapraz Kur Bilgisi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'Kart Tipi'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
+    ls_tab-bank_field_no = 32.
+    ls_tab-bank_field = 'Kart Tipi'.
+    ls_tab-alv_field = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'UyeRefNo'.
+    ls_tab-bank_field_no = 33.
+    ls_tab-bank_field = 'UyeRefNo'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'TransactionId'.
+    ls_tab-bank_field_no = 34.
+    ls_tab-bank_field = 'TransactionId'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'AboneNo'.
+    ls_tab-bank_field_no = 35.
+    ls_tab-bank_field = 'AboneNo'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'Ana İşyeri No'.
+    ls_tab-bank_field_no = 36.
+    ls_tab-bank_field = 'Ana İşyeri No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'Kur Bilgisi'.
+    ls_tab-bank_field_no = 37.
+    ls_tab-bank_field = 'Kur Bilgisi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 8.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'Kart Brand'.
-    ls_tab-ALV_FIELD = 'card_type'.
+    ls_tab-bank_field_no = 38.
+    ls_tab-bank_field = 'Kart Brand'.
+    ls_tab-alv_field = 'card_type'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'Üye iş Yeri Numarası'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'Üye iş Yeri Numarası'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'Valör Tarihi'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'YYYYMMDD'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'Valör Tarihi'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'YYYYMMDD'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'Brüt Tutar'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'Brüt Tutar'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'Net Tutar'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'Net Tutar'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'İşlem Tarihi'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'YYYYMMDD'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'İşlem Tarihi'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'YYYYMMDD'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'işlem Saati'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'işlem Saati'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'Terminal Numarası'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'Terminal Numarası'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'Provizyon/Onay Numarası'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'Provizyon/Onay Numarası'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'İşlem tipine tanımlı üye işyer'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'İşlem tipine tanımlı üye işyer'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'İşlemden Kesilen Üye İşyeri Ko'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'İşlemden Kesilen Üye İşyeri Ko'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'İşlemden kesilen servis/hizmet'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'İşlemden kesilen servis/hizmet'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'Tanımlı hizmet komisyonu oranı'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'Tanımlı hizmet komisyonu oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'Katkı Payı'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'Katkı Payı'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'Batch Numarası'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'Batch Numarası'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'Para Birimi'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'Para Birimi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'İşlemin günsonu tarihi'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'İşlemin günsonu tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'İşlem Tipi'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'İşlem Tipi'.
+    ls_tab-alv_field = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'Kart Numarası'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'Kart Numarası'.
+    ls_tab-alv_field = 'CARD_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'Taksit Sıra No'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'Taksit Sıra No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'Taksit Sayısı'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'Taksit Sayısı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'Hesap Numarası'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'Hesap Numarası'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'İşlem Numarası'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'İşlem Numarası'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
+    ls_tab-bukrs = '1000'.
     ls_tab-bank_no = 9.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'Sipariş Numarası'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'Sipariş Numarası'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'Gerçekleşen İşlemler'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'Gerçekleşen İşlemler'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'Banka Vergi Sicil No'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'Banka Vergi Sicil No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'Banka Vergi Dairesi'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'Banka Vergi Dairesi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'Merkez No'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'Merkez No'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'İşyeri No'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'İşyeri No'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'Ticari Unvan'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'Ticari Unvan'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'İşletme Adı'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'İşletme Adı'.
+    ls_tab-alv_field = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'Bölüm Numarası'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'Bölüm Numarası'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'Bölüm Adı'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'Bölüm Adı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'Cari Hesap'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'Cari Hesap'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'VKN/TCKN'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'VKN/TCKN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'İşlem Tarihi'.
-    ls_tab-ALV_FIELD = 'transaction_date'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'İşlem Tarihi'.
+    ls_tab-alv_field = 'transaction_date'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'İşlem Zamanı'.
-    ls_tab-ALV_FIELD = 'ZZTRANSACTION_TIME'.
-    ls_tab-TIME_FORMAT = 'HH:MM:SS'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'İşlem Zamanı'.
+    ls_tab-alv_field = 'ZZTRANSACTION_TIME'.
+    ls_tab-time_format = 'HH:MM:SS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'İşlem Türü'.
-    ls_tab-ALV_FIELD = 'ZZDESCRIPTION'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'İşlem Türü'.
+    ls_tab-alv_field = 'ZZDESCRIPTION'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'İşlem Tipi'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'İşlem Tipi'.
+    ls_tab-alv_field = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'İşlem Tutarı'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'İşlem Tutarı'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'Taksit Tarihi'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'Taksit Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'Taksit Sayısı'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_NUMBER'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'Taksit Sayısı'.
+    ls_tab-alv_field = 'INSTALLMENT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'Taksit No'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_ORDER'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'Taksit No'.
+    ls_tab-alv_field = 'INSTALLMENT_ORDER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'Taksit Tutarı'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'Taksit Tutarı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'Gün Sonu Tarihi'.
-    ls_tab-ALV_FIELD = 'ZZEND_OF_DAY_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'Gün Sonu Tarihi'.
+    ls_tab-alv_field = 'ZZEND_OF_DAY_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'Hesaba Geçiş Tarihi'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'Hesaba Geçiş Tarihi'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'POS No'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'POS No'.
+    ls_tab-alv_field = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'POS İşlem No'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'POS İşlem No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'Onay Kodu'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'Onay Kodu'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'Kart No'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'Kart No'.
+    ls_tab-alv_field = 'CARD_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'İşyeri Ücreti Pşn/Tkst(Oran)'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'İşyeri Ücreti Pşn/Tkst(Oran)'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'İşyeri Ücreti Pşn/Tkst(Tutar)'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field = 'İşyeri Ücreti Pşn/Tkst(Tutar)'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'İşyeri Ücreti Pşn/Tkst(Maximum'.
+    ls_tab-bank_field_no = 29.
+    ls_tab-bank_field = 'İşyeri Ücreti Pşn/Tkst(Maximum'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'İşyeri Ücreti Pşn/Tkst(Maximum'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 30.
+    ls_tab-bank_field = 'İşyeri Ücreti Pşn/Tkst(Maximum'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'İşyeri Puan Katkı Oranı'.
+    ls_tab-bank_field_no = 31.
+    ls_tab-bank_field = 'İşyeri Puan Katkı Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'İşyeri Puan Katkı Tutarı'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 32.
+    ls_tab-bank_field = 'İşyeri Puan Katkı Tutarı'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'Üye İşyeri Ücreti Taksit (Oran'.
+    ls_tab-bank_field_no = 33.
+    ls_tab-bank_field = 'Üye İşyeri Ücreti Taksit (Oran'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'Üye İşyeri Ücreti Taksit (Tuta'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 34.
+    ls_tab-bank_field = 'Üye İşyeri Ücreti Taksit (Tuta'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'Merkez Puan Katkı Oranı'.
+    ls_tab-bank_field_no = 35.
+    ls_tab-bank_field = 'Merkez Puan Katkı Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'Merkez Puan Katkı Tutarı'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 36.
+    ls_tab-bank_field = 'Merkez Puan Katkı Tutarı'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'Merkez Ücreti Taksit (Oran)'.
+    ls_tab-bank_field_no = 37.
+    ls_tab-bank_field = 'Merkez Ücreti Taksit (Oran)'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'Merkez Ücreti Taksit (Tutar)'.
+    ls_tab-bank_field_no = 38.
+    ls_tab-bank_field = 'Merkez Ücreti Taksit (Tutar)'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 39.
-    ls_tab-BANK_FIELD = 'Merkez Ücreti Pşn/Tkst(Maximum'.
+    ls_tab-bank_field_no = 39.
+    ls_tab-bank_field = 'Merkez Ücreti Pşn/Tkst(Maximum'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 40.
-    ls_tab-BANK_FIELD = 'Merkez Ücreti Pşn/Tkst(Maximum'.
+    ls_tab-bank_field_no = 40.
+    ls_tab-bank_field = 'Merkez Ücreti Pşn/Tkst(Maximum'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 41.
-    ls_tab-BANK_FIELD = 'Para Birimi'.
+    ls_tab-bank_field_no = 41.
+    ls_tab-bank_field = 'Para Birimi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 42.
-    ls_tab-BANK_FIELD = 'Net Tutar'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.0,00'.
+    ls_tab-bank_field_no = 42.
+    ls_tab-bank_field = 'Net Tutar'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0.0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 43.
-    ls_tab-BANK_FIELD = 'Üye İşyeri Bilgisi'.
+    ls_tab-bank_field_no = 43.
+    ls_tab-bank_field = 'Üye İşyeri Bilgisi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 44.
-    ls_tab-BANK_FIELD = 'Recurring ID'.
+    ls_tab-bank_field_no = 44.
+    ls_tab-bank_field = 'Recurring ID'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 45.
-    ls_tab-BANK_FIELD = 'Recurring Sıra No'.
+    ls_tab-bank_field_no = 45.
+    ls_tab-bank_field = 'Recurring Sıra No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 5.
-    ls_tab-BANK_FIELD_NO = 46.
-    ls_tab-BANK_FIELD = 'Brand'.
-    ls_tab-ALV_FIELD = 'CARD_TYPE'.
+    ls_tab-bank_field_no = 46.
+    ls_tab-bank_field = 'Brand'.
+    ls_tab-alv_field = 'CARD_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'MUTA NO'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field = 'MUTA NO'.
+    ls_tab-alv_field = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'TİCARİ UNVAN'.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field = 'TİCARİ UNVAN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'VERGİ NO'.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field = 'VERGİ NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'ÜYE NO'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field = 'ÜYE NO'.
+    ls_tab-alv_field = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'ÜYE ADI'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field = 'ÜYE ADI'.
+    ls_tab-alv_field = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'TERM_NO'.
-    ls_tab-ALV_FIELD = 'terminal_no'.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field = 'TERM_NO'.
+    ls_tab-alv_field = 'terminal_no'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'ISLEM_TARİHİ'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field = 'ISLEM_TARİHİ'.
+    ls_tab-alv_field = 'TRANSACTION_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'İŞLEM SAATİ'.
-    ls_tab-ALV_FIELD = 'ZZTRANSACTION_TIME'.
-    ls_tab-TIME_FORMAT = 'HHMMSS'.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field = 'İŞLEM SAATİ'.
+    ls_tab-alv_field = 'ZZTRANSACTION_TIME'.
+    ls_tab-time_format = 'HHMMSS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'VALOR_TARİHİ'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field = 'VALOR_TARİHİ'.
+    ls_tab-alv_field = 'VALUE_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'TAKSİT SAYISI'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_ORDER'.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field = 'TAKSİT SAYISI'.
+    ls_tab-alv_field = 'INSTALLMENT_ORDER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'TOPLAM TAKSİT'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_NUMBER'.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field = 'TOPLAM TAKSİT'.
+    ls_tab-alv_field = 'INSTALLMENT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'KART_NO'.
-    ls_tab-ALV_FIELD = 'card_no'.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field = 'KART_NO'.
+    ls_tab-alv_field = 'card_no'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'KART_TİPİ'.
-    ls_tab-ALV_FIELD = 'card_type'.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field = 'KART_TİPİ'.
+    ls_tab-alv_field = 'card_type'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'URUN_TİPİ'.
-    ls_tab-ALV_FIELD = 'process_type'.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field = 'URUN_TİPİ'.
+    ls_tab-alv_field = 'process_type'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'ONLINE_FLAG'.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field = 'ONLINE_FLAG'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'SERVIS_KODU'.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field = 'SERVIS_KODU'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'ISLEM_TİPİ'.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field = 'ISLEM_TİPİ'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'PROV_NO'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field = 'PROV_NO'.
+    ls_tab-alv_field = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'BRÜT_TUTAR'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field = 'BRÜT_TUTAR'.
+    ls_tab-alv_field = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'KOMİSYON_ORANI'.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field = 'KOMİSYON_ORANI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'KOMİSYON_TUTAR'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field = 'KOMİSYON_TUTAR'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'HİZMET_KOM ORAN'.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field = 'HİZMET_KOM ORAN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'HİZMET_KOM_TUTAR'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field = 'HİZMET_KOM_TUTAR'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'IKP ORAN'.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field = 'IKP ORAN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'IKP TUTAR'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field = 'IKP TUTAR'.
+    ls_tab-alv_field = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'NET_TUTAR'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field = 'NET_TUTAR'.
+    ls_tab-alv_field = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'DOVİZ'.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field = 'DOVİZ'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'SİPARİŞ NUMARASI'.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field = 'SİPARİŞ NUMARASI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'Bloke Süresi'.
+    ls_tab-bank_field_no = 29.
+    ls_tab-bank_field = 'Bloke Süresi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'Bloke Tipi'.
+    ls_tab-bank_field_no = 30.
+    ls_tab-bank_field = 'Bloke Tipi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'Bloke Hesap No'.
+    ls_tab-bank_field_no = 31.
+    ls_tab-bank_field = 'Bloke Hesap No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'Taksitli Bloke Hesap No'.
+    ls_tab-bank_field_no = 32.
+    ls_tab-bank_field = 'Taksitli Bloke Hesap No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'Vadesiz Hesap No'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bank_field_no = 33.
+    ls_tab-bank_field = 'Vadesiz Hesap No'.
+    ls_tab-alv_field = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'ŞUBE KODU'.
+    ls_tab-bank_field_no = 34.
+    ls_tab-bank_field = 'ŞUBE KODU'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'ŞUBE ADI'.
+    ls_tab-bank_field_no = 35.
+    ls_tab-bank_field = 'ŞUBE ADI'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'İŞLEM AÇIKLAMA'.
+    ls_tab-bank_field_no = 36.
+    ls_tab-bank_field = 'İŞLEM AÇIKLAMA'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'GÜNSONU TARİHİ'.
-    ls_tab-ALV_FIELD = 'ZZEND_OF_DAY_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bank_field_no = 37.
+    ls_tab-bank_field = 'GÜNSONU TARİHİ'.
+    ls_tab-alv_field = 'ZZEND_OF_DAY_DATE'.
+    ls_tab-date_format = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'BLOKE NO'.
+    ls_tab-bank_field_no = 38.
+    ls_tab-bank_field = 'BLOKE NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 39.
-    ls_tab-BANK_FIELD = 'BANKA KODU'.
+    ls_tab-bank_field_no = 39.
+    ls_tab-bank_field = 'BANKA KODU'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 40.
-    ls_tab-BANK_FIELD = 'İŞLEM KODU'.
+    ls_tab-bank_field_no = 40.
+    ls_tab-bank_field = 'İŞLEM KODU'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
+    ls_tab-bukrs = '2000'.
     ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 41.
-    ls_tab-BANK_FIELD = 'İŞLEM TÜRÜ'.
+    ls_tab-bank_field_no = 41.
+    ls_tab-bank_field = 'İŞLEM TÜRÜ'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'Üye No'.
-    ls_tab-ALV_FIELD = 'workplace_no'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'Üye Adı'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'Servis Kodu'.
-    ls_tab-ALV_FIELD = 'card_type'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'Açıklama'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'Komisyon Oranı'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'Komisyon Tutar'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'Bloke Süresi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'Bloke Tipi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'Yükleme Tarihi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'Ödeme Tarihi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'İşlem Açıklama'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'İşlem Tipi'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'İşlem Tarihi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'Term ID'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'KTS'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'UTS'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'Tutar'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'Puan'.
-    ls_tab-ALV_FIELD = 'commission_amount'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'Provizyon Kodu'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'Kart No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'Net Hesaba Geçen'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'İşlem Saati'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'Bloke Hesap No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'Vadesiz Hesap No'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'STAN No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'Referans No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'Bloke Tarihi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'Çözülme Tarihi'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD/MM/YYYY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'Hesaba Geçiş Tarihi'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD/MM/YYYY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'Vadesiz IBAN'.
-    ls_tab-ALV_FIELD = 'ZZIBAN'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'Para Birimi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'UyeIndirimTutar'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'Taksitli İşlem Ücreti'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'İşlem Kodu Açıklaması'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'Komisyon Tutarı(Döviz)'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'Kur'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'Puan (Döviz)'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'Taksitli İşlem Ücreti Toplamı'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 39.
-    ls_tab-BANK_FIELD = 'Tutar (Döviz)'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 40.
-    ls_tab-BANK_FIELD = 'Müşteri No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 41.
-    ls_tab-BANK_FIELD = 'Taksitli İşlem Ücreti Toplamı'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 42.
-    ls_tab-BANK_FIELD = 'Üye Grup No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 43.
-    ls_tab-BANK_FIELD = 'Store No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 44.
-    ls_tab-BANK_FIELD = 'Sipariş No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 45.
-    ls_tab-BANK_FIELD = 'OTS'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 46.
-    ls_tab-BANK_FIELD = 'Batch No'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 47.
-    ls_tab-BANK_FIELD = 'Kart Sahibi Adı'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 48.
-    ls_tab-BANK_FIELD = 'Taksit Sırası'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 49.
-    ls_tab-BANK_FIELD = 'Kampanyasız Komisyon'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 50.
-    ls_tab-BANK_FIELD = 'Kampanyasız Bloke Valör'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 51.
-    ls_tab-BANK_FIELD = 'Turkcell Sipariş No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 52.
-    ls_tab-BANK_FIELD = 'GSM No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 53.
-    ls_tab-BANK_FIELD = 'Bayii Kodu'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 54.
-    ls_tab-BANK_FIELD = 'Turkcell Fatura No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 55.
-    ls_tab-BANK_FIELD = 'BSMV Tutar'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 56.
-    ls_tab-BANK_FIELD = 'Üst Bayi Üye No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 57.
-    ls_tab-BANK_FIELD = 'Banka Anahtarı'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 58.
-    ls_tab-BANK_FIELD = 'Kart Tipi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 59.
-    ls_tab-BANK_FIELD = 'RRN'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 2.
-    ls_tab-BANK_FIELD_NO = 60.
-    ls_tab-BANK_FIELD = 'Kart Markası'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'UYEISY'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'TRMNO'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'TKSTID'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'ISLTAR'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'KRTNO'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'KART_TIP'.
-    ls_tab-ALV_FIELD = 'CARD_TYPE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'ORJTUT'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'BLOKCOZTAR'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'NETODMTUT'.
-    ls_tab-ALV_FIELD = 'net_amount'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'KMSYN'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'KPAY'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'ERKODMTUT'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'ERKBLKKOM'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'TKSTADEDI'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'TKSTSIRASI'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'SUBE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'TIP'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'HSP'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'ISLTIP'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'CIF_CUSTNO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'PRVZTAR'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'IADEUYEISY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'AUTH_NBR'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'REFERANS_NO'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'DETAY_TAKSIT_TOPLAM_TUTAR_CCY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'DETAY_TAKSIT_TOPLAM_TUTAR_ORJ'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'SANAL_POS_ID'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'YENI_UYEISY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'TABELA_UNVANI'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 3.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'ISLSAATI'.
-    ls_tab-TIME_FORMAT = 'HH:MM:SS'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'Valor'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'İşlem Tarihi'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'Gün Sonu Tarihi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'Mono'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'Zincir No'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'Üye No'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'Teriminal No'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'Üye Adı'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'Kart No'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'Batch No'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'Taksit Sayısı'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_NUMBER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'Taksit No'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_ORDER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'Kart Tipi'.
-    ls_tab-ALV_FIELD = 'CARD_TYPE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'IslemTipi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'İşlem Tipi'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'İşlem Kodu'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'İşlem Alt Kodu'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'İşlem Açıklaması'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'Provizyon No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'İşlem Tutarı'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'Net Tutar'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'Komisyon Oranı'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'Komisyon Tutarı'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'IKP'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'BKP'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'BKB'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'IKB'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'Hizmet Ücreti'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'Bloke Süresi'.
-    ls_tab-ALV_FIELD = 'ZZEND_OF_DAY_DATE'.
-    ls_tab-DATE_FORMAT = 'DDMMYYYY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'Bloke No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'Hesap No'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'Bloke Hesap No'.
-    ls_tab-ALV_FIELD = 'CARD_TYPE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
-
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'Para Birimi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'İşlem Saati'.
-    ls_tab-ALV_FIELD = 'ZZTRANSACTION_TIME'.
-    ls_tab-TIME_FORMAT = 'HH:MM:SS'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 1.
+    ls_tab-bank_field   = 'Mono'.
+    ls_tab-alv_field     = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'Hesap Hareket Aciklama'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'İşlem Adet'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 2.
+    ls_tab-bank_field   = 'Ticari Ünvan'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'Transfer Fiş No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'Kart Tipi1'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 3.
+    ls_tab-bank_field   = 'Vergi No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 39.
-    ls_tab-BANK_FIELD = 'Kart Owner'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 40.
-    ls_tab-BANK_FIELD = 'Brand Owner'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 4.
+    ls_tab-bank_field   = 'Zincir No'.
+    ls_tab-alv_field     = 'ZZCENTER_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 41.
-    ls_tab-BANK_FIELD = 'İşlem Açıklaması1'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 42.
-    ls_tab-BANK_FIELD = 'Şube Kodu'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 5.
+    ls_tab-bank_field   = 'İşyeri No'.
+    ls_tab-alv_field     = 'WORKPLACE_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 43.
-    ls_tab-BANK_FIELD = 'Kur Bilgisi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 44.
-    ls_tab-BANK_FIELD = 'İşlem Kayıt Tarihi'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 6.
+    ls_tab-bank_field   = 'İşyeri Adı'.
+    ls_tab-alv_field     = 'ZZMEMBER_WORKPLC_NAME'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 45.
-    ls_tab-BANK_FIELD = 'İşlem Kayıt Saati'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 46.
-    ls_tab-BANK_FIELD = 'İşlem No'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 7.
+    ls_tab-bank_field   = 'MCC'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 4.
-    ls_tab-BANK_FIELD_NO = 47.
-    ls_tab-BANK_FIELD = 'Sipariş No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'MUTA NO'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 8.
+    ls_tab-bank_field   = 'Terminal Numarası'.
+    ls_tab-alv_field     = 'TERMINAL_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'TİCARİ UNVAN'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'VERGİ NO'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 9.
+    ls_tab-bank_field   = 'İşlem Tarihi'.
+    ls_tab-alv_field     = 'TRANSACTION_DATE'.
+    ls_tab-date_format   = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'ÜYE NO'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'ÜYE ADI'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 10.
+    ls_tab-bank_field   = 'İşlem Saati'.
+    ls_tab-alv_field     = 'ZZTRANSACTION_TIME'.
+    ls_tab-time_format   = 'HHMMSS'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'TERM_NO'.
-    ls_tab-ALV_FIELD = 'TERMINAL_NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'ISLEM_TARİHİ'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 11.
+    ls_tab-bank_field   = 'Hesaba Geçiş Tarihi Valor'.
+    ls_tab-alv_field     = 'VALUE_DATE'.
+    ls_tab-date_format   = 'DD.MM.YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'İŞLEM SAATİ'.
-    ls_tab-ALV_FIELD = 'ZZTRANSACTION_TIME'.
-    ls_tab-TIME_FORMAT = 'HHMMSS'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'VALOR_TARİHİ'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 12.
+    ls_tab-bank_field   = 'Taksit Sayısı'.
+    ls_tab-alv_field     = 'INSTALLMENT_NUMBER'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'TAKSİT SAYISI'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_ORDER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'TOPLAM TAKSİT'.
-    ls_tab-ALV_FIELD = 'INSTALLMENT_NUMBER'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 13.
+    ls_tab-bank_field   = 'Taksit No'.
+    ls_tab-alv_field     = 'INSTALLMENT_ORDER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'KART_NO'.
-    ls_tab-ALV_FIELD = 'card_no'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'KART_TİPİ'.
-    ls_tab-ALV_FIELD = 'card_type'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 14.
+    ls_tab-bank_field   = 'Kart No'.
+    ls_tab-alv_field     = 'CARD_NO'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'URUN_TİPİ'.
-    ls_tab-ALV_FIELD = 'process_type'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'ONLINE_FLAG'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 15.
+    ls_tab-bank_field   = 'Kart Tipi'.
+    ls_tab-alv_field     = 'CARD_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'SERVIS_KODU'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'ISLEM_TİPİ'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 16.
+    ls_tab-bank_field   = 'Temassız Flag'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'PROV_NO'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'BRÜT_TUTAR'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 17.
+    ls_tab-bank_field   = 'Offline Flag'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'KOMİSYON_ORANI'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'KOMİSYON_TUTAR'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 18.
+    ls_tab-bank_field   = 'Servis Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'HİZMET_KOM ORAN'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'HİZMET_KOM_TUTAR'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 19.
+    ls_tab-bank_field   = 'İşlem Tipi'.
+    ls_tab-alv_field     = 'PROCESS_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'IKP ORAN'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'IKP TUTAR'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 20.
+    ls_tab-bank_field   = 'İşlem Alt Kodu'.
+    ls_tab-alv_field     = 'PROVISION_APR_CODE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'NET_TUTAR'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0,00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'DOVİZ'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 21.
+    ls_tab-bank_field   = 'İşlem Adı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 28.
-    ls_tab-BANK_FIELD = 'SİPARİŞ NUMARASI'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 29.
-    ls_tab-BANK_FIELD = 'Bloke Süresi'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 22.
+    ls_tab-bank_field   = 'Provizyon Numarası'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 30.
-    ls_tab-BANK_FIELD = 'Bloke Tipi'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 31.
-    ls_tab-BANK_FIELD = 'Bloke Hesap No'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 23.
+    ls_tab-bank_field   = 'Brüt Tutar'.
+    ls_tab-alv_field     = 'GROSS_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 32.
-    ls_tab-BANK_FIELD = 'Taksitli Bloke Hesap No'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 33.
-    ls_tab-BANK_FIELD = 'Vadesiz Hesap No'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 24.
+    ls_tab-bank_field   = 'Komisyon Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 34.
-    ls_tab-BANK_FIELD = 'ŞUBE KODU'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 35.
-    ls_tab-BANK_FIELD = 'ŞUBE ADI'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 25.
+    ls_tab-bank_field   = 'Komisyon Tutar'.
+    ls_tab-alv_field     = 'COMMISSION_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 36.
-    ls_tab-BANK_FIELD = 'İŞLEM AÇIKLAMA'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 37.
-    ls_tab-BANK_FIELD = 'GÜNSONU TARİHİ'.
-    ls_tab-ALV_FIELD = 'ZZEND_OF_DAY_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 26.
+    ls_tab-bank_field   = 'Marka Servis Komisyon Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 38.
-    ls_tab-BANK_FIELD = 'BLOKE NO'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 39.
-    ls_tab-BANK_FIELD = 'BANKA KODU'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 27.
+    ls_tab-bank_field   = 'Marka Servis Komisyon Tutar'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 40.
-    ls_tab-BANK_FIELD = 'İŞLEM KODU'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 6.
-    ls_tab-BANK_FIELD_NO = 41.
-    ls_tab-BANK_FIELD = 'İŞLEM TÜRÜ'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 28.
+    ls_tab-bank_field   = 'IKP Oranı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 1.
-    ls_tab-BANK_FIELD = 'VALOR'.
-    ls_tab-ALV_FIELD = 'VALUE_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 2.
-    ls_tab-BANK_FIELD = 'SUBE'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 29.
+    ls_tab-bank_field   = 'IKP Tutar'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 3.
-    ls_tab-BANK_FIELD = 'HESAPNO'.
-    ls_tab-ALV_FIELD = 'ZZACCOUNT_NUMBER'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 4.
-    ls_tab-BANK_FIELD = 'ISYERINO'.
-    ls_tab-ALV_FIELD = 'WORKPLACE_NO'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 30.
+    ls_tab-bank_field   = 'Net Tutar'.
+    ls_tab-alv_field     = 'NET_AMOUNT'.
+    ls_tab-amount_format = '0,00'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 5.
-    ls_tab-BANK_FIELD = 'BRUT_TUTAR'.
-    ls_tab-ALV_FIELD = 'GROSS_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 6.
-    ls_tab-BANK_FIELD = 'KOMISYON'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 31.
+    ls_tab-bank_field   = 'Para Birimi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 7.
-    ls_tab-BANK_FIELD = 'NET_TUTAR'.
-    ls_tab-ALV_FIELD = 'NET_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 8.
-    ls_tab-BANK_FIELD = 'ISLEMTARIH'.
-    ls_tab-ALV_FIELD = 'TRANSACTION_DATE'.
-    ls_tab-DATE_FORMAT = 'DD.MM.YYYY'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 32.
+    ls_tab-bank_field   = 'Sipariş No'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 9.
-    ls_tab-BANK_FIELD = 'ISLEM'.
-    ls_tab-ALV_FIELD = 'PROCESS_TYPE'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 10.
-    ls_tab-BANK_FIELD = 'URUN'.
-    ls_tab-ALV_FIELD = 'card_type'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 33.
+    ls_tab-bank_field   = 'Bloke Süresi'.
+    ls_tab-alv_field     = 'ZZEND_OF_DAY_DATE'.
+    ls_tab-date_format   = 'DD/MM/YYYY'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 11.
-    ls_tab-BANK_FIELD = 'SERVİS KOM.'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 12.
-    ls_tab-BANK_FIELD = 'ODUL_KATKISI'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 34.
+    ls_tab-bank_field   = 'Bloke Tipi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 13.
-    ls_tab-BANK_FIELD = 'ANA_MERKEZ_ODUL'.
-    ls_tab-ALV_FIELD = 'COMMISSION_AMOUNT'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 14.
-    ls_tab-BANK_FIELD = 'ANAMRK_SERVİS KOM.'.
-    ls_tab-ALV_FIELD = 'commission_amount'.
-    ls_tab-AMOUNT_FORMAT = '0.00'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 35.
+    ls_tab-bank_field   = 'Bloke Hesap No'.
+    ls_tab-alv_field     = 'CARD_TYPE'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 15.
-    ls_tab-BANK_FIELD = 'FIRMA'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 16.
-    ls_tab-BANK_FIELD = 'IBAN'.
-    ls_tab-ALV_FIELD = 'ZZIBAN'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 36.
+    ls_tab-bank_field   = 'Vadesiz Hesap No'.
+    ls_tab-alv_field     = 'ZZACCOUNT_NUMBER'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 17.
-    ls_tab-BANK_FIELD = 'ISYERISOSYALKATKI'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 18.
-    ls_tab-BANK_FIELD = 'PROGRAMUCRETI'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 37.
+    ls_tab-bank_field   = 'Şube Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 19.
-    ls_tab-BANK_FIELD = 'ANAMRKSOSYALKATKI'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 20.
-    ls_tab-BANK_FIELD = 'ANAMRKPRGRAMUCRET'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 38.
+    ls_tab-bank_field   = 'Şube Adı'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 21.
-    ls_tab-BANK_FIELD = 'SERVİS ÜCRET TİPİ'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 22.
-    ls_tab-BANK_FIELD = 'BATCHN'.
-    ls_tab-ALV_FIELD = 'PROVISION_APR_CODE'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 39.
+    ls_tab-bank_field   = 'Günsonu Tarihi'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 23.
-    ls_tab-BANK_FIELD = 'TERMİNALN'.
-    ls_tab-ALV_FIELD = 'terminal_no'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 24.
-    ls_tab-BANK_FIELD = 'KART NUMARASI'.
-    ls_tab-ALV_FIELD = 'CARD_NO'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 40.
+    ls_tab-bank_field   = 'İşlem Kodu'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 25.
-    ls_tab-BANK_FIELD = 'İŞYERİ BİLGİSİ'.
-    ls_tab-ALV_FIELD = 'ZZMEMBER_WORKPLC_NAME'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 26.
-    ls_tab-BANK_FIELD = 'RETREF NO'.
-    ls_tab-ALV_FIELD = 'ZZCENTER_NUMBER'.
+    ls_tab-bukrs        = '3000'.
+    ls_tab-bank_no      = 4.
+    ls_tab-bank_field_no = 41.
+    ls_tab-bank_field   = 'RRN'.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-bank_no = 7.
-    ls_tab-BANK_FIELD_NO = 27.
-    ls_tab-BANK_FIELD = 'SİPARİŞ NUMARASI'.
-    APPEND ls_tab TO lt_tab.
-    CLEAR ls_tab.
 
     IF lt_tab IS NOT INITIAL.
-      MODIFY YOP_T_POSFIELD FROM TABLE @lt_tab.
+      MODIFY yop_t_posfield FROM TABLE @lt_tab.
       COMMIT WORK.
     ENDIF.
   ENDMETHOD.

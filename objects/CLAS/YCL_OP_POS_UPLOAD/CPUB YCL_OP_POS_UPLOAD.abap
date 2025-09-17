@@ -6,10 +6,10 @@ CLASS ycl_op_pos_upload DEFINITION
   PUBLIC SECTION.
 
     INTERFACES if_oo_adt_classrun .
-    CLASS-METHODS LOAD_YOP_T_BANKACC.
-    CLASS-METHODS LOAD_YOP_T_BANKFORMAT.
-    CLASS-METHODS LOAD_YOP_T_BNKINF.
-    CLASS-METHODS LOAD_YOP_T_FIELDCALC.
-    CLASS-METHODS LOAD_YOP_T_POSFIELD.
-    CLASS-METHODS LOAD_YOP_T_PTYPEMATCH.
-    CLASS-METHODS RUN_ALL.
+    CLASS-METHODS load_yop_t_bankacc.
+    CLASS-METHODS load_yop_t_bankformat.
+    CLASS-METHODS load_yop_t_bnkinf.
+    CLASS-METHODS load_yop_t_fieldcalc.
+    CLASS-METHODS load_yop_t_posfield.
+    CLASS-METHODS load_yop_t_ptypematch.
+    CLASS-METHODS run_all.

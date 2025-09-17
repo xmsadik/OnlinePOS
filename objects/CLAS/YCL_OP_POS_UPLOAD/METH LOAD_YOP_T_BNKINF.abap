@@ -1,154 +1,154 @@
-  METHOD LOAD_YOP_T_BNKINF.
-    DATA lt_tab TYPE TABLE OF YOP_T_BNKINF.
+  METHOD load_yop_t_bnkinf.
+    DATA lt_tab TYPE TABLE OF yop_t_bnkinf.
     DATA ls_tab LIKE LINE OF lt_tab.
 
-    ls_tab-BUKRS = '1000'.
-    ls_tab-BANK_NO = 1.
-    ls_tab-BANK_NAME = 'Akbank'.
-    ls_tab-BANK_CODE = 'AKB'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '1000'.
+    ls_tab-bank_no = 1.
+    ls_tab-bank_name = 'Akbank'.
+    ls_tab-bank_code = 'AKB'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
-    ls_tab-BANK_NO = 2.
-    ls_tab-BANK_NAME = 'QNB'.
-    ls_tab-BANK_CODE = 'QNB'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '1000'.
+    ls_tab-bank_no = 2.
+    ls_tab-bank_name = 'QNB'.
+    ls_tab-bank_code = 'QNB'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
-    ls_tab-BANK_NO = 3.
-    ls_tab-BANK_NAME = 'Yapı Kredi'.
-    ls_tab-BANK_CODE = 'YKB'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '1000'.
+    ls_tab-bank_no = 3.
+    ls_tab-bank_name = 'Yapı Kredi'.
+    ls_tab-bank_code = 'YKB'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
-    ls_tab-BANK_NO = 4.
-    ls_tab-BANK_NAME = 'Ziraat Bankası'.
-    ls_tab-BANK_CODE = 'ZRT'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '1000'.
+    ls_tab-bank_no = 4.
+    ls_tab-bank_name = 'Ziraat Bankası'.
+    ls_tab-bank_code = 'ZRT'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
-    ls_tab-BANK_NO = 5.
-    ls_tab-BANK_NAME = 'İş Bankası'.
-    ls_tab-BANK_CODE = 'İSB'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '1000'.
+    ls_tab-bank_no = 5.
+    ls_tab-bank_name = 'İş Bankası'.
+    ls_tab-bank_code = 'İSB'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
-    ls_tab-BANK_NO = 6.
-    ls_tab-BANK_NAME = 'Halkbank'.
-    ls_tab-BANK_CODE = 'HLK'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '1000'.
+    ls_tab-bank_no = 6.
+    ls_tab-bank_name = 'Halkbank'.
+    ls_tab-bank_code = 'HLK'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
-    ls_tab-BANK_NO = 7.
-    ls_tab-BANK_NAME = 'Garanti Bankası'.
-    ls_tab-BANK_CODE = 'GRN'.
-    ls_tab-FILE_TYPE = '.TXT'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '1000'.
+    ls_tab-bank_no = 7.
+    ls_tab-bank_name = 'Garanti Bankası'.
+    ls_tab-bank_code = 'GRN'.
+    ls_tab-file_type = '.TXT'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
-    ls_tab-BANK_NO = 8.
-    ls_tab-BANK_NAME = 'Vakıfbank'.
-    ls_tab-BANK_CODE = 'VKB'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '1000'.
+    ls_tab-bank_no = 8.
+    ls_tab-bank_name = 'Vakıfbank'.
+    ls_tab-bank_code = 'VKB'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '1000'.
-    ls_tab-BANK_NO = 9.
-    ls_tab-BANK_NAME = 'Türkiye Finans'.
-    ls_tab-BANK_CODE = 'TFN'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '1000'.
+    ls_tab-bank_no = 9.
+    ls_tab-bank_name = 'Türkiye Finans'.
+    ls_tab-bank_code = 'TFN'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
-    ls_tab-BANK_NO = 5.
-    ls_tab-BANK_NAME = 'İş Bankası'.
-    ls_tab-BANK_CODE = 'İSB'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '2000'.
+    ls_tab-bank_no = 5.
+    ls_tab-bank_name = 'İş Bankası'.
+    ls_tab-bank_code = 'İSB'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '2000'.
-    ls_tab-BANK_NO = 6.
-    ls_tab-BANK_NAME = 'Halkbank'.
-    ls_tab-BANK_CODE = 'HLK'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '2000'.
+    ls_tab-bank_no = 6.
+    ls_tab-bank_name = 'Halkbank'.
+    ls_tab-bank_code = 'HLK'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-BANK_NO = 2.
-    ls_tab-BANK_NAME = 'QNB'.
-    ls_tab-BANK_CODE = 'QNB'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '3000'.
+    ls_tab-bank_no = 2.
+    ls_tab-bank_name = 'QNB'.
+    ls_tab-bank_code = 'QNB'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-BANK_NO = 3.
-    ls_tab-BANK_NAME = 'Yapı Kredi'.
-    ls_tab-BANK_CODE = 'YKB'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '3000'.
+    ls_tab-bank_no = 3.
+    ls_tab-bank_name = 'Yapı Kredi'.
+    ls_tab-bank_code = 'YKB'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-BANK_NO = 4.
-    ls_tab-BANK_NAME = 'Ziraat Bankası'.
-    ls_tab-BANK_CODE = 'ZRT'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '3000'.
+    ls_tab-bank_no = 4.
+    ls_tab-bank_name = 'Ziraat Bankası'.
+    ls_tab-bank_code = 'ZRT'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-BANK_NO = 6.
-    ls_tab-BANK_NAME = 'Halkbank'.
-    ls_tab-BANK_CODE = 'HLK'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '3000'.
+    ls_tab-bank_no = 6.
+    ls_tab-bank_name = 'Halkbank'.
+    ls_tab-bank_code = 'HLK'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
-    ls_tab-BUKRS = '3000'.
-    ls_tab-BANK_NO = 7.
-    ls_tab-BANK_NAME = 'Garanti Bankası'.
-    ls_tab-BANK_CODE = 'GRN'.
-    ls_tab-SEPARATOR = ';'.
-    ls_tab-CODEPAGE = 0.
+    ls_tab-bukrs = '3000'.
+    ls_tab-bank_no = 7.
+    ls_tab-bank_name = 'Garanti Bankası'.
+    ls_tab-bank_code = 'GRN'.
+    ls_tab-separator = ';'.
+    ls_tab-codepage = 0.
     APPEND ls_tab TO lt_tab.
     CLEAR ls_tab.
 
     IF lt_tab IS NOT INITIAL.
-      MODIFY YOP_T_BNKINF FROM TABLE @lt_tab.
+      MODIFY yop_t_bnkinf FROM TABLE @lt_tab.
       COMMIT WORK.
     ENDIF.
   ENDMETHOD.

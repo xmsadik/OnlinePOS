@@ -7,6 +7,8 @@
     SPLIT is_request-file_content AT cl_abap_char_utilities=>newline INTO TABLE lt_lines.
     DELETE lt_lines INDEX 1.
 
+
+
     CASE ms_bank_info-separator.
       WHEN space.
         me->mapping_seperated_space( EXPORTING it_lines = lt_lines
